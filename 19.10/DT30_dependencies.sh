@@ -1,3 +1,9 @@
+##
+## Author: Per Jensen
+## Contact: per2jensen@gmail.com
+## Licensed under the Apache License 2.0
+##
+
 INSTALL_PREFIX_DEFAULT=~/darktable
 
 mkdir -p ~/git

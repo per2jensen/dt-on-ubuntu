@@ -1,3 +1,9 @@
+##
+## Author: Per Jensen
+## Contact: per2jensen@gmail.com
+## Licensed under the Apache License 2.0
+##
+
 VM_NAME=ubuntu1910
 VM_SIZE=8G
 VM_IMAGE=19.10
