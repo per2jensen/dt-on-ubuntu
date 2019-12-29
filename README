@@ -1,0 +1,65 @@
+This is a recipe for setting up compile dependencies for DarkTable 3.0
+on Ubuntu 1910.
+
+Dependencies
+============
+    Multipass:
+    The scrips requires Ubuntu Multipass to be installed, as all activity
+    takes place within a virtual machine. You can of course create your own 
+    Ubuntu 19.10 VM and fire off the "compile script" there.
+
+    Multipass is a snap away on Ubuntu 19.10: snap install --classic multipass
+
+    Git close location:
+    Darktable is cloned into ~/git/darktable
+
+
+What the scripts do:
+====================
+The compile script does the following:
+  - clones Darktable 3.0 from Github into the VM
+  - adds llvm repoes to the VM's APT sources
+  - adds llvm APT key into the VM
+  - installs loads of necessary packages in the VM
+  - builds and install Darktable in the VM
+  - starts Darktable tp print the --version info in the VM
+
+The end result from running "darktable --version", should be this:
+
+this is darktable 3.0.0
+copyright (c) 2009-2019 johannes hanika
+darktable-dev@lists.darktable.org
+
+compile options:
+  bit depth is 64 bit
+  normal build
+  SSE2 optimized codepath enabled
+  OpenMP support enabled
+  OpenCL support enabled
+  Lua support enabled, API version 5.0.2
+  Colord support enabled
+  gPhoto2 support enabled
+  GraphicsMagick support enabled
+  OpenEXR support enabled
+
+
+How to compile DT30 for Ubuntu 19.10 in a VM
+============================================
+cd to the 1910 directory
+chmod u+x install_in_vm.sh
+./install_in_vm.sh
+
+
+Issues:
+=======
+ - Documentation is not compiled
+ - The "sed" command in the install_in_vm.sh script is not parameterized
+ - darktable is installe in ~/darktable, there are some hardcoded references
+ 
+
+
+Once you are happy that things work, consider changing the script to your liking
+and fire it off the script on your
+computer to enjoy the new DT goodness :-)
+
+
