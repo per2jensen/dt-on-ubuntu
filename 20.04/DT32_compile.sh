@@ -5,7 +5,7 @@
 ##
 
 # Change this if you want to run the compile script directly on your machine
-INSTALL_PREFIX=~/darktable
+INSTALL_PREFIX=##PREFIX##
 
 ##############################33
 ##  Master
@@ -38,11 +38,11 @@ sudo apt install -y libc6-dev libglib2.0-dev
 sudo apt install -y liblensfun-dev libcurl4-openssl-dev libjpeg8-dev libtiff-dev liblcms2-dev libjson-glib-dev
 sudo apt install -y libgtk-3-0 libgtk-3-dev libxml2-dev libxml2 librsvg2-2 librsvg2-dev libsqlite3-dev
 sudo apt install -y libexiv2-dev libpugixml-dev lua5.3 liblua5.3-0   liblua5.3-dev libgphoto2-6 libgphoto2-dev colord libcolord-dev
-sudo apt install -y libgraphicsmagick1-dev imagemagick libopenexr-dev libopenexr24   desktop-file-utils 
-sudo apt install -y libxml2-utils libflickcurl-dev libopenjp2-7-dev libopenjp2-7 libosmgpsmap-1.0-dev libosmgpsmap-1.0-1
+sudo apt install -y libgraphicsmagick1-dev imagemagick libmagick++-6.q16-dev libopenexr-dev libopenexr24   desktop-file-utils 
+sudo apt install -y libxml2-utils xlstproc libflickcurl-dev libopenjp2-7-dev libopenjp2-7 libosmgpsmap-1.0-dev libosmgpsmap-1.0-1
 sudo apt install -y libcolord-gtk-dev libcolord-gtk1 libcups2-dev libcups2
 sudo apt install -y libsecret-1-dev libsecret-1-0 
-sudo apt install -y libimage-exiftool-perl xlstproc
+sudo apt install -y libimage-exiftool-perl 
 
 ./build.sh --prefix ${INSTALL_PREFIX}
 
