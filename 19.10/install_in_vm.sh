@@ -4,22 +4,41 @@
 ## Licensed under the Apache License 2.0
 ##
 
-VM_NAME=ubuntu1910
+VM_NAME=ubuntu1910-DTcompile
 VM_SIZE=8G
 VM_IMAGE=19.10
-DT_COMPILE_SCRIPT=DT30_dependencies.sh
-# INSTALL_PREFIX_DEFAULT=~\/darktable  can't make this work  with sed
+DT_COMPILE_SCRIPT=DT30_compile.sh
+INSTALL_PREFIX=/home/ubuntu/darktable   #using the ubuntu user in the VM
 
-multipass launch -n ${VM_NAME} -d ${VM_SIZE} ${VM_IMAGE}
-
+# check if VM exists and is running
+multipass list |egrep ${VM_NAME}
 if [ $? == "0" ]
 then
-    echo start compiling Darktable in virtual machine ${VM_NAME}
-    sed -i "s/^INSTALL_PREFIX_DEFAULT=.*/INSTALL_PREFIX_DEFAULT=~\/darktable/" ${DT_COMPILE_SCRIPT}
-    multipass transfer ${DT_COMPILE_SCRIPT} ${VM_NAME}:
-    multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT}
-    # install dependencies, compile and install, then print DT's --version info
-    multipass exec ${VM_NAME} -- ./${DT_COMPILE_SCRIPT}
+    multipass info ${VM_NAME} |egrep "State.*?Running"
+    if [ $? != "0" ]
+    then
+        multipass start ${VM_NAME}
+    fi
+    multipass info ${VM_NAME} |egrep "State.*?Running"
+    if [ $? != "0" ]
+    then
+        echo "VM: ${VM_NAME}" does not start, exiting
+        exit 1 
+    fi
 else
-    echo VM creation failed....
+    # create the VM
+    multipass launch -n ${VM_NAME} -d ${VM_SIZE} ${VM_IMAGE}
+    if [ $? != "0" ]
+    then
+        echo "VM: ${VM_NAME}" does not start, exiting
+        exit 1     
+    fi
 fi
+
+echo start compiling Darktable in virtual machine ${VM_NAME}
+sed s+##PREFIX##+${INSTALL_PREFIX}+ ${DT_COMPILE_SCRIPT} > ${DT_COMPILE_SCRIPT}.vm
+
+multipass transfer ${DT_COMPILE_SCRIPT}.vm ${VM_NAME}:
+multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT}.vm
+# install dependencies, compile and install, then print DT's --version info
+multipass exec ${VM_NAME} -- ./${DT_COMPILE_SCRIPT}.vm

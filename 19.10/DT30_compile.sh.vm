@@ -5,7 +5,7 @@
 ##
 
 # Change this if you want to run the compile script directly on your machine
-INSTALL_PREFIX=##PREFIX##
+INSTALL_PREFIX=/home/ubuntu/darktable
 
 mkdir -p ~/git
 cd ~/git

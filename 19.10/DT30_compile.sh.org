@@ -4,14 +4,13 @@
 ## Licensed under the Apache License 2.0
 ##
 
-# Change this if you want to run the compile script directly on your machine
-INSTALL_PREFIX=##PREFIX##
+INSTALL_PREFIX_DEFAULT=/home/pj/darktable
 
 mkdir -p ~/git
 cd ~/git
 git clone git://github.com/darktable-org/darktable.git
 cd darktable
-git checkout tags/release-3.0.2
+git checkout tags/release-3.0.0
 git submodule init
 git submodule update
 
@@ -39,10 +38,10 @@ sudo apt-get install -y libxml2-utils libflickcurl-dev libopenjp2-7-dev libopenj
 sudo apt-get install -y libcolord-gtk-dev libcolord-gtk1 libcups2-dev libcups2
 sudo apt-get install -y libsecret-1-dev libsecret-1-0 
 
-./build.sh --prefix ${INSTALL_PREFIX}
+./build.sh --prefix ${INSTALL_PREFIX_DEFAULT}
 
 cmake --build "~/git/darktable/build" --target install -- -j1
 
-${INSTALL_PREFIX}/bin/darktable --version
+${INSTALL_PREFIX_DEFAULT}/bin/darktable --version
 
 

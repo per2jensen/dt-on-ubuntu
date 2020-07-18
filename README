@@ -1,5 +1,8 @@
-This is a recipe for setting up compile dependencies for DarkTable 3.0
-on Ubuntu 1910.
+This is a recipe for setting up compile dependencies for DarkTable 3.0.x
+on Ubuntu 1910. 
+The package installation and DT compilation is done in a virtual machine,
+so you can verify it looks good.
+
 
 Dependencies
 ============
@@ -10,23 +13,23 @@ Dependencies
 
     Multipass is a snap away on Ubuntu 19.10: snap install --classic multipass
 
-    Git close location:
-    Darktable is cloned into ~/git/darktable
+    DT is cloned to this location within the VM: ~/git/darktable
 
 
 What the scripts do:
 ====================
 The compile script does the following:
-  - clones Darktable 3.0 from Github into the VM
+  - creates/starts a VM called ubuntu<version>-DTcompile
+  - clones Darktable from Github into the VM
   - adds llvm repoes to the VM's APT sources
   - adds llvm APT key into the VM
-  - installs loads of necessary packages in the VM
+  - installs loads of necessary Ubuntu packages in the VM
   - builds and install Darktable in the VM
-  - starts Darktable tp print the --version info in the VM
+  - starts Darktable to print the --version info in the VM
 
-The end result from running "darktable --version", should be this:
+The end result from running "darktable --version", should look something like this:
 
-this is darktable 3.0.0
+this is darktable 3.0.2
 copyright (c) 2009-2019 johannes hanika
 darktable-dev@lists.darktable.org
 
@@ -53,13 +56,11 @@ chmod u+x install_in_vm.sh
 Issues:
 =======
  - Documentation is not compiled
- - The "sed" command in the install_in_vm.sh script is not parameterized
- - darktable is installe in ~/darktable, there are some hardcoded references
  
 
 
-Once you are happy that things work, consider changing the script to your liking
-and fire it off the script on your
-computer to enjoy the new DT goodness :-)
+Once you are happy that things work in the VM, consider changing
+the compile script to your liking (the INSTALL_PREFIX env variable)
+and run it to enjoy the DT goodness :-)
 
 
