@@ -21,6 +21,10 @@ Dependencies
 
     DT is cloned to this location within the VM: /home/ubuntu/git/darktable
 
+* Installation
+    Darktable is installed into /opt/darktable
+      
+
 
 What the scripts do:
 ====================
@@ -36,21 +40,22 @@ The compile script does the following:
 
 The end result from running "darktable --version", should look something like this:
 
-this is darktable 3.0.2
-copyright (c) 2009-2019 johannes hanika
-darktable-dev@lists.darktable.org
+    this is darktable 3.1.0+2475~g08eba104b
+    copyright (c) 2009-2020 johannes hanika
+    darktable-dev@lists.darktable.org
 
-compile options:
-  bit depth is 64 bit
-  normal build
-  SSE2 optimized codepath enabled
-  OpenMP support enabled
-  OpenCL support enabled
-  Lua support enabled, API version 5.0.2
-  Colord support enabled
-  gPhoto2 support enabled
-  GraphicsMagick support enabled
-  OpenEXR support enabled
+    compile options:
+    bit depth is 64 bit
+    normal build
+    SSE2 optimized codepath enabled
+    OpenMP support enabled
+    OpenCL support enabled
+    Lua support enabled, API version 6.0.0
+    Colord support enabled
+    gPhoto2 support enabled
+    GraphicsMagick support enabled
+    ImageMagick support disabled
+    OpenEXR support enabled
 
 
 How to compile DT30 for Ubuntu 19.10 in a VM
@@ -68,9 +73,6 @@ Issues:
 *    Documentation is not compiled
  
 
-
 Once you are happy that things work in the VM, consider changing
 the compile script to your liking (set the INSTALL_PREFIX env variable)
 and run the script to enjoy the DT goodness :-)
-
-

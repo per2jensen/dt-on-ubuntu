@@ -8,7 +8,7 @@ VM_NAME=ubuntu2004-DTcompile
 VM_SIZE=8G
 VM_IMAGE=20.04
 DT_COMPILE_SCRIPT=DT32_compile.sh
-INSTALL_PREFIX=/home/ubuntu/darktable   #using the ubuntu user in the VM
+INSTALL_PREFIX=/opt/darktable
 
 # check if VM exists and is running
 multipass list |egrep ${VM_NAME}
@@ -38,7 +38,11 @@ fi
 echo start compiling Darktable in virtual machine ${VM_NAME}
 sed s+##PREFIX##+${INSTALL_PREFIX}+ ${DT_COMPILE_SCRIPT} > ${DT_COMPILE_SCRIPT}.vm
 
+# I have darktable in: /home/pj/darktable
 multipass transfer ${DT_COMPILE_SCRIPT}.vm ${VM_NAME}:
 multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT}.vm
 # install dependencies, compile and install, then print DT's --version info
 multipass exec ${VM_NAME} -- ./${DT_COMPILE_SCRIPT}.vm
+
+
+
