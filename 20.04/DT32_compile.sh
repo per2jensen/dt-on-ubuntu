@@ -15,7 +15,7 @@ mkdir -p ~/git
 cd ~/git
 git clone git://github.com/darktable-org/darktable.git
 cd darktable
-git checkout master
+git checkout darktable-3.2.x
 git submodule init
 git submodule update
 
