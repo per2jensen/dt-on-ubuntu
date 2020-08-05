@@ -37,11 +37,9 @@ fi
 
 echo start compiling Darktable in virtual machine ${VM_NAME}
 sed s+##PREFIX##+${INSTALL_PREFIX}+ ${DT_COMPILE_SCRIPT} > ${DT_COMPILE_SCRIPT}.vm
-
-# I have darktable in: /home/pj/darktable
 multipass transfer ${DT_COMPILE_SCRIPT}.vm ${VM_NAME}:
 multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT}.vm
-# install dependencies, compile and install, then print DT's --version info
+# in VM: install dependencies, compile and install, then print DT's --version info
 multipass exec ${VM_NAME} -- ./${DT_COMPILE_SCRIPT}.vm
 
 

@@ -8,7 +8,11 @@ is no contamination of your computer, until you want to deploy there.
 
 Dependencies
 ============
-* Multipass:
+* KVM 
+    kvm must be installed in order for multipass to work
+    Take a look here: https://www.tecmint.com/install-kvm-on-ubuntu/
+
+* Multipass
     
     The scrips requires Ubuntu Multipass to be installed, as all activity
     takes place within a virtual machine. You can of course create your own 
@@ -40,7 +44,7 @@ The compile script does the following:
 
 The end result from running "darktable --version", should look something like this:
 
-    this is darktable 3.1.0+2475~g08eba104b
+    this is darktable 3.3.0+13~ga4325917f
     copyright (c) 2009-2020 johannes hanika
     darktable-dev@lists.darktable.org
 
@@ -58,10 +62,10 @@ The end result from running "darktable --version", should look something like th
     OpenEXR support enabled
 
 
-How to compile DT30 for Ubuntu 19.10 in a VM
+How to compile DT32 for Ubuntu 20.04 in a VM
 ============================================
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/19.10
+    cd dt-on-ubuntu/20.04
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 

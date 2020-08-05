@@ -6,27 +6,35 @@
 
 # Change this if you want to run the compile script directly on your machine
 INSTALL_PREFIX=##PREFIX##
+# Change this if another branch is to be built
+BRANCH=darktable-3.2.1
 
-##############################33
-##  Master
-################################
+echo user compiling: 
+id
 
-mkdir -p ~/git
-cd ~/git
-git clone git://github.com/darktable-org/darktable.git
-cd darktable
-git checkout darktable-3.2.x
+# get the source ready
+if [[ -d ~/git/darktable  ]]; then
+  echo "darktable dir exists"
+  cd ~/git/darktable
+  git pull
+else
+  mkdir -p ~/git
+  cd ~/git
+  git clone git://github.com/darktable-org/darktable.git
+  cd darktable
+fi
+git checkout -b ${BRANCH}
 git submodule init
 git submodule update
 
 
-sudo echo deb http://apt.llvm.org/eoan/ llvm-toolchain-eoan main > /etc/apt/sources.list.d/llvm.list
-sudo echo deb-src http://apt.llvm.org/eoan/ llvm-toolchain-eoan main >> /etc/apt/sources.list.d/llvm.list
-sudo wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-# Fingerprint: 6084 F3CF 814B 57C1 CF12 EFD5 15CF 4D18 AF4F 7421
-sudo apt update && sudo apt upgrade
+# install loads of dependencies
+sudo sh -c 'echo deb     http://apt.llvm.org/focal/ llvm-toolchain-focal main > /etc/apt/sources.list.d/llvm.list'
+sudo sh -c 'echo deb-src http://apt.llvm.org/focal/ llvm-toolchain-focal main >> /etc/apt/sources.list.d/llvm.list'
+sudo wget -O -    https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+sudo apt update && sudo apt upgrade -y
 
-sudo apt install -y lld-10 llvm-dev llvm-runtime llvm-10 lldb-10 python3-lldb-10  \
+sudo apt install -y lld-10 llvm-10-dev llvm-10-runtime llvm-10 lldb-10 python3-lldb-10  \
    clang-10  clang-format-10 clang-tidy-10 clang-tools-10 python-clang  \
    libc++-10-dev libc++1-10 \
    libc++abi-10-dev libc++abi1-10  \
@@ -59,6 +67,7 @@ then
 fi 
 
 
+# build darktable
 ./build.sh --prefix ${INSTALL_PREFIX} | tee dt-build.log
 if [ $? != "0" ]
 then
@@ -66,12 +75,14 @@ then
 fi
 
 
-sudo cmake --build "/home/ubuntu/git/darktable/build" --target install -- -j1
+#install darktable
+sudo cmake --build "${HOME}/git/darktable/build" --target install -- -j1
 if [ $? != "0" ]
 then
     echo "Installation failed, exiting"  && exit
 fi
 
+# print --version info
 ${INSTALL_PREFIX}/bin/darktable --version
 
 
