@@ -7,7 +7,7 @@
 # Change this if you want to run the compile script directly on your machine
 INSTALL_PREFIX=##PREFIX##
 # Change this if another branch is to be built
-BRANCH=darktable-3.2.1
+BRANCH=darktable-3.2.x
 
 echo user compiling: 
 id
@@ -23,7 +23,7 @@ else
   git clone git://github.com/darktable-org/darktable.git
   cd darktable
 fi
-git checkout -b ${BRANCH}
+git checkout ${BRANCH}
 git submodule init
 git submodule update
 
