@@ -9,6 +9,7 @@ is no contamination of your computer, until you want to deploy there.
 Dependencies
 ============
 * KVM 
+
     kvm must be installed in order for multipass to work
     Take a look here: https://www.tecmint.com/install-kvm-on-ubuntu/
 
@@ -44,7 +45,7 @@ The compile script does the following:
 
 The end result from running "darktable --version", should look something like this:
 
-    this is darktable 3.3.0+13~ga4325917f
+    this is darktable 3.2.1
     copyright (c) 2009-2020 johannes hanika
     darktable-dev@lists.darktable.org
 
@@ -60,6 +61,7 @@ The end result from running "darktable --version", should look something like th
     GraphicsMagick support enabled
     ImageMagick support disabled
     OpenEXR support enabled
+
 
 
 How to compile DT32 for Ubuntu 20.04 in a VM
