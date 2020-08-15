@@ -1,3 +1,4 @@
+# Compile darktable on Ubuntu
 This is a collection of scripts for compiling different versions of DarkTable 
 on different versions of Ubuntu. The versions follows what I am using on my 
 workstation :-)
