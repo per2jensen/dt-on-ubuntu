@@ -28,7 +28,7 @@ Dependencies
     DT is cloned to this location within the VM: /home/ubuntu/git/darktable
 
 * Installation
-    Darktable is installed into /opt/darktable
+    Darktable is installed into /opt/darktable within the VM.
       
 
 
