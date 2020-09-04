@@ -82,7 +82,6 @@ Issues:
 
 
 # Build on your machine
-=======================
 Once you are happy that things work in the VM, consider changing
 the compile script to your liking (set the INSTALL_PREFIX env variable)
 and run the script to enjoy the DT goodness :-)
