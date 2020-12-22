@@ -7,7 +7,7 @@
 # Change this if you want to run the compile script directly on your machine
 INSTALL_PREFIX=##PREFIX##
 # Change this if another branch is to be built
-BRANCH=release-3.4.0
+BRANCH=darktable-3.4.x
 
 #########################
 # don't change below
