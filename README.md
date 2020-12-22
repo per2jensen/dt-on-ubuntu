@@ -46,7 +46,7 @@ The compile script does the following:
 
 The end result from running "darktable --version", should look like this:
 
-    this is darktable 3.4.0
+    this is darktable 3.4.0+19~g1f6328e85
     copyright (c) 2009-2020 johannes hanika
     darktable-dev@lists.darktable.org
 
