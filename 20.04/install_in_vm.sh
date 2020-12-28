@@ -36,11 +36,12 @@ else
 fi
 
 echo start compiling Darktable in virtual machine ${VM_NAME}
-sed s+##PREFIX##+${INSTALL_PREFIX}+ ${DT_COMPILE_SCRIPT} > ${DT_COMPILE_SCRIPT}.vm
-multipass transfer ${DT_COMPILE_SCRIPT}.vm ${VM_NAME}:
+sed s+##PREFIX##+${INSTALL_PREFIX}+ ${DT_COMPILE_SCRIPT} > /tmp/${DT_COMPILE_SCRIPT}.vm
+multipass transfer /tmp/${DT_COMPILE_SCRIPT}.vm ${VM_NAME}:
 multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT}.vm
 # in VM: install dependencies, compile and install, then print DT's --version info
 multipass exec ${VM_NAME} -- ./${DT_COMPILE_SCRIPT}.vm
+rm /tmp/${DT_COMPILE_SCRIPT}.vm
 
 
 
