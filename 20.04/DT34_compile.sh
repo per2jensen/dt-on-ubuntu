@@ -6,8 +6,8 @@
 
 # Change this if you want to run the compile script directly on your machine
 INSTALL_PREFIX=##PREFIX##
-# Change this if another branch is to be built
-BRANCH=darktable-3.4.x
+# Change this if another tag is to be built
+TAG=release-3.4.0
 
 #########################
 # don't change below
@@ -26,7 +26,7 @@ else
   git clone git://github.com/darktable-org/darktable.git
   cd darktable
 fi
-git checkout ${BRANCH}
+git checkout ${TAG}
 git submodule init
 git submodule update
 
