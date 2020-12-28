@@ -44,9 +44,9 @@ The compile script does the following:
 *    builds and install Darktable in the VM
 *    starts Darktable to print the --version info in the VM
 
-The end result from running "darktable --version", should look like this:
+The end result from running "darktable --version", is this:
 
-    this is darktable 3.4.0+19~g1f6328e85
+    this is darktable 3.4.0
     copyright (c) 2009-2020 johannes hanika
     darktable-dev@lists.darktable.org
 
@@ -64,9 +64,8 @@ The end result from running "darktable --version", should look like this:
     OpenEXR support enabled
 
 
-
-How to compile DT34 for Ubuntu 20.04 in a VM
-============================================
+How to compile Darktable 3.4.0 for Ubuntu 20.04 in a VM
+=======================================================
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
     cd dt-on-ubuntu/20.04
     chmod u+x install_in_vm.sh
