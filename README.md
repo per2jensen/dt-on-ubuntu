@@ -3,12 +3,13 @@ This is a collection of scripts for compiling different versions of DarkTable
 on different versions of Ubuntu. The versions follows what I am using on my 
 workstation :-)
 
-The package installation and Darktable compilation is done in virtual machines, so there
-is no contamination of your computer, until you want to deploy there.
+There are 2 ways to install Darktable:
+  1. Darktable releases can be installed in a VM for trying it out.
+  
+  2. Follow Git Master on your computer using the script for that.
 
 
-Dependencies
-============
+# Dependencies
 * KVM 
 
     kvm must be installed in order for multipass to work
@@ -32,8 +33,7 @@ Dependencies
       
 
 
-What the scripts do:
-====================
+# What the scripts do:
 The compile script does the following:
 
 *    creates/starts a VM called ubuntu<version>-DTcompile
@@ -64,8 +64,7 @@ The end result from running "darktable --version", is this:
     OpenEXR support enabled
 
 
-How to compile Darktable 3.4.0 for Ubuntu 20.04 in a VM
-=======================================================
+# How to compile Darktable 3.4.0 for Ubuntu 20.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
     cd dt-on-ubuntu/20.04
     chmod u+x install_in_vm.sh
@@ -79,16 +78,22 @@ If you have an old VM lying around from the DT32 compile, there will be a key is
     multipass purge 
 
 
-Done :-)
-
-
-Issues:
-=======
-*    Documentation is not compiled
- 
-
-
-# Build on your machine
+## Build on your machine
 Once you are happy that things work in the VM, consider changing
 the compile script to your liking (set the INSTALL_PREFIX env variable in DT34_compile.sh)
 and run the script to enjoy the DT goodness :-)
+
+
+
+# How to follow Git Master, to be on the bleeding edge
+    git clone https://github.com/per2jensen/dt-on-ubuntu.git
+    cd dt-on-ubuntu/20.04
+    chmod u+x master_compile.sh
+    ./master_compile.sh
+
+Edit the environment variables in the script to your taste.
+
+
+
+# Issues:
+*    Documentation is not compiled
