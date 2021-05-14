@@ -64,9 +64,9 @@ The end result from running "darktable --version", is this:
     OpenEXR support enabled
 
 
-# How to compile Darktable 3.4.0 for Ubuntu 20.04 in a VM
+# How to compile Darktable 3.4.0 for Ubuntu 21.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/20.04
+    cd dt-on-ubuntu/21.04
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 
