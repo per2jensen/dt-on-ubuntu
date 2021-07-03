@@ -7,10 +7,10 @@
 ##
 
 VM_NAME=ubuntu2104-DTcompile
-VM_SIZE=8G
+VM_SIZE=15G
 VM_IMAGE=21.04
-DT_COMPILE_SCRIPT=DT34_compile.sh
-_COMPILE=_compile.sh
+DT_COMPILE_SCRIPT=DT36_compile.sh
+_COMPILE=_compileDT36.sh
 INSTALL_PREFIX=/opt/darktable
 
 # check if VM exists and is running
@@ -37,6 +37,9 @@ else
         exit 1     
     fi
 fi
+
+multipass exec ${VM_NAME} -- sudo apt update
+multipass exec ${VM_NAME} -- sudo apt upgrade -y
 
 echo start compiling Darktable in virtual machine ${VM_NAME}
 multipass transfer ${DT_COMPILE_SCRIPT} ${_COMPILE} ${VM_NAME}:

@@ -45,36 +45,37 @@ The compile script does the following:
 *    starts Darktable to print the --version info in the VM
 
 The end result from running "darktable --version", is this:
+````
+this is darktable 3.6.0
+copyright (c) 2009-2021 johannes hanika
+darktable-dev@lists.darktable.org
 
-    this is darktable 3.4.0
-    copyright (c) 2009-2020 johannes hanika
-    darktable-dev@lists.darktable.org
+compile options:
+  bit depth is 64 bit
+  normal build
+  SSE2 optimized codepath enabled
+  OpenMP support enabled
+  OpenCL support enabled
+  Lua support enabled, API version 7.0.0
+  Colord support enabled
+  gPhoto2 support enabled
+  GraphicsMagick support enabled
+  ImageMagick support disabled
+  OpenEXR support enabled
+````
+ 
 
-    compile options:
-    bit depth is 64 bit
-    normal build
-    SSE2 optimized codepath enabled
-    OpenMP support enabled
-    OpenCL support enabled
-    Lua support enabled, API version 6.1.0
-    Colord support enabled
-    gPhoto2 support enabled
-    GraphicsMagick support enabled
-    ImageMagick support disabled
-    OpenEXR support enabled
-
-
-# How to compile Darktable 3.4.0 for Ubuntu 21.04 in a VM
+# How to compile Darktable 3.6.0 for Ubuntu 21.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
     cd dt-on-ubuntu/21.04
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 
 
-If you have an old VM lying around from the DT32 compile, there will be a key issue as the LLVM project has changed keys. Solve this by doing the compile from a fresh VM, by deleting the old one.
+If you have an old VM lying around and want to start from a fresh, do this.
 
-    multipass stop   ubuntu2004-DTcompile
-    multipass delete ubuntu2004-DTcompile
+    multipass stop   ubuntu2104-DTcompile
+    multipass delete ubuntu2104-DTcompile
     multipass purge 
 
 
