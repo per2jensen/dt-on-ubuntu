@@ -6,11 +6,19 @@
 ##
 
 # Change this if you want to run the compile script directly on your machine
-INSTALL_PREFIX="/opt/darktable"
-# Folder which already contains a darktable git checkout or should be used for a fresh one 
-DT_SRC_FOLDER="$HOME/darktable"
 # Release to use
-RELEASE=release-3.6.0
+export RELEASE=release-3.6.1
+
+export VERSION=$(echo $RELEASE|egrep -o '\-.*')
+export INSTALL_PREFIX="$HOME/programmer/darktable${VERSION}"
+
+# Folder which already contains a darktable git checkout or should be used for a fresh one 
+export DT_SRC_FOLDER="$HOME/git/darktable"
+
+# the code name for Ubuntu used in LLVM's repos
+export CODENAME_LLVM="hirsute"
 
 # FIXME don't hardcode here
-source ./_compileDT36.sh
+#source ./_compileDT36.sh
+./_compileDT36.sh
+

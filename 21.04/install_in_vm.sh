@@ -11,7 +11,6 @@ VM_SIZE=15G
 VM_IMAGE=21.04
 DT_COMPILE_SCRIPT=DT36_compile.sh
 _COMPILE=_compileDT36.sh
-INSTALL_PREFIX=/opt/darktable
 
 # check if VM exists and is running
 multipass list |egrep ${VM_NAME}
@@ -38,10 +37,7 @@ else
     fi
 fi
 
-multipass exec ${VM_NAME} -- sudo apt update
-multipass exec ${VM_NAME} -- sudo apt upgrade -y
-
-echo start compiling Darktable in virtual machine ${VM_NAME}
+echo update OS and start compiling Darktable in virtual machine ${VM_NAME}
 multipass transfer ${DT_COMPILE_SCRIPT} ${_COMPILE} ${VM_NAME}:
 multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT} ${_COMPILE}
 # in VM: install dependencies, compile and install, then print DT's --version info
