@@ -65,7 +65,7 @@ compile options:
 ````
  
 
-# How to compile Darktable 3.6.0 for Ubuntu 21.04 in a VM
+# How to compile Darktable 3.6.1 for Ubuntu 21.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
     cd dt-on-ubuntu/21.04
     chmod u+x install_in_vm.sh
@@ -81,14 +81,14 @@ If you have an old VM lying around and want to start from a fresh, do this.
 
 ## Build on your machine
 Once you are happy that things work in the VM, consider changing
-the compile script to your liking (set the INSTALL_PREFIX env variable in DT34_compile.sh)
+the compile script to your liking (set the INSTALL_PREFIX env variable in DT36_compile.sh)
 and run the script to enjoy the DT goodness :-)
 
 
 
 # How to follow Git Master, to be on the bleeding edge
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/20.04
+    cd dt-on-ubuntu/21.04
     chmod u+x master_compile.sh
     ./master_compile.sh
 
