@@ -4,25 +4,19 @@
 echo user compiling: 
 id
 
-# get the source ready
-if [[ -d $DT_SRC_FOLDER  ]]; then
-  echo "darktable dir exists"
-  cd $DT_SRC_FOLDER
-  git pull --rebase
-else
-  mkdir -p $DT_SRC_FOLDER
-  git clone git://github.com/darktable-org/darktable.git $DT_SRC_FOLDER
-  cd $DT_SRC_FOLDER
-fi
-git checkout ${BRANCH}
-git submodule init
-git submodule update
-
 
 # install loads of dependencies
-sudo sh -c 'echo deb     http://apt.llvm.org/focal/ llvm-toolchain-focal main > /etc/apt/sources.list.d/llvm.list'
-sudo sh -c 'echo deb-src http://apt.llvm.org/focal/ llvm-toolchain-focal main >> /etc/apt/sources.list.d/llvm.list'
-sudo wget -O -    https://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+echo Fetch llvm-snapshot-gpg.key
+curl https://apt.llvm.org/llvm-snapshot.gpg.key|gpg --dearmor > llvm-snapshot-keyring.gpg
+if [ $? != "0" ]
+then
+    echo "Downloading llvm gpg key failed, exiting"  && exit
+fi
+sudo mv llvm-snapshot-keyring.gpg /usr/share/keyrings/
+
+sudo sh -c "echo deb     [signed-by=/usr/share/keyrings/llvm-snapshot-keyring.gpg]  http://apt.llvm.org/${CODENAME_LLVM}/ llvm-toolchain-${CODENAME_LLVM} main > /etc/apt/sources.list.d/llvm.list"
+sudo sh -c "echo deb-src [signed-by=/usr/share/keyrings/llvm-snapshot-keyring.gpg]  http://apt.llvm.org/${CODENAME_LLVM}/ llvm-toolchain-${CODENAME_LLVM} main > /etc/apt/sources.list.d/llvm-src.list"
+
 sudo apt update && sudo apt upgrade -y
 
 sudo apt install -y lld-11 llvm-11-dev llvm-11-runtime llvm-11 lldb-11 python3-lldb-11  \
@@ -57,6 +51,20 @@ if [ $? != "0" ]
 then
     echo "Package installation failed, exiting"  && exit
 fi 
+
+# get the source ready
+if [[ -d $DT_SRC_FOLDER  ]]; then
+  echo "darktable dir exists"
+  cd $DT_SRC_FOLDER
+  git pull --rebase
+else
+  mkdir -p $DT_SRC_FOLDER
+  git clone git://github.com/darktable-org/darktable.git $DT_SRC_FOLDER
+  cd $DT_SRC_FOLDER
+fi
+git checkout ${BRANCH}
+git submodule init
+git submodule update
 
 
 # build darktable
