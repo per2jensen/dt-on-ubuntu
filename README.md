@@ -4,7 +4,7 @@ on different versions of Ubuntu. The versions follows what I am using on my
 workstation :-)
 
 There are 2 ways to install Darktable:
-  1. Darktable releases can be installed in a VM for trying it out.
+  1. Darktable releases can be installed in a VM for trying it out, and then do the compile on your computer.
   
   2. Follow Git Master on your computer using the script for that.
 
