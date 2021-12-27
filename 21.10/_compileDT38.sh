@@ -21,7 +21,7 @@ sudo apt install -y lld-12 llvm-12-dev llvm-12-runtime llvm-12 lldb-12 python3-l
    libc++-12-dev libc++1-12 \
    libc++abi-12-dev libc++abi1-12  \
    libclang-12-dev libclang1-12 liblldb-12-dev libllvm-12-ocaml-dev libomp-12-dev libomp5-12  \
-   libopencl-clang-dev libopencl-clang12 opencl-c-headers opencl-headers libclang-common-12-dev  \
+   libopencl-clang-dev libopencl-clang12 opencl-c-headers opencl-headers libclang-common-12-dev nvidia-opencl-dev ocl-icd-opencl-dev \
    intltool cmake
 if [ $? != "0" ]
 then
