@@ -44,9 +44,9 @@ The compile script does the following:
 *    builds and install Darktable in the VM
 *    starts Darktable to print the --version info in the VM
 
-The end result from running "darktable --version", is this:
+The end result from running "darktable --version", is this: (on the latest DT version)
 ````
-this is darktable 3.6.0
+this is darktable 3.8.0
 copyright (c) 2009-2021 johannes hanika
 darktable-dev@lists.darktable.org
 
@@ -56,39 +56,40 @@ compile options:
   SSE2 optimized codepath enabled
   OpenMP support enabled
   OpenCL support enabled
-  Lua support enabled, API version 7.0.0
+  Lua support enabled, API version 8.0.0
   Colord support enabled
   gPhoto2 support enabled
   GraphicsMagick support enabled
   ImageMagick support disabled
   OpenEXR support enabled
+
 ````
  
 
-# How to compile Darktable 3.6.0 for Ubuntu 21.04 in a VM
+# How to compile Darktable 3.8.0 for Ubuntu 21.10 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/21.04
+    cd dt-on-ubuntu/21.10
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 
 
 If you have an old VM lying around and want to start from a fresh, do this.
 
-    multipass stop   ubuntu2104-DTcompile
-    multipass delete ubuntu2104-DTcompile
+    multipass stop   ubuntu2110-DTcompile
+    multipass delete ubuntu2110-DTcompile
     multipass purge 
 
 
 ## Build on your machine
 Once you are happy that things work in the VM, consider changing
-the compile script to your liking (set the INSTALL_PREFIX env variable in DT34_compile.sh)
+the compile script to your liking (set the INSTALL_PREFIX env variable in 21.10/DT38_compile.sh)
 and run the script to enjoy the DT goodness :-)
 
 
 
 # How to follow Git Master, to be on the bleeding edge
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/20.04
+    cd dt-on-ubuntu/20.10
     chmod u+x master_compile.sh
     ./master_compile.sh
 
