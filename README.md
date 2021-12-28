@@ -102,5 +102,7 @@ Edit the environment variables in the script to your taste.
   
 # Links
   [Darktable website](https://www.darktable.org/)
+  
   [Darktable on github](https://github.com/darktable-org/darktable)
+  
   [Darktable on Pixls.us](https://discuss.pixls.us/c/software/darktable/19)
