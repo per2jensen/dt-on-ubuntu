@@ -102,9 +102,11 @@ Edit the environment variables in the script to your taste.
 ## Exiv2
 21.10 provides exiv2 version 0.27-3, DT requires 0.27-4 ("no support for ISOBMFF files (CR3, AVIF, HEIF)")
 
+[OBS: libexiv2 version 0.27.5 (currently)](https://build.opensuse.org/package/show/graphics:darktable:master/exiv2-non-suse) should be built on ubuntu.
+
 ## libheif
 I am a bit unclear on "libheif":
-The configuration part of the build issues this
+The configuration part of the build issues this:
 ````
 -- Could NOT find libheif (missing: libheif_DIR)
 ````
