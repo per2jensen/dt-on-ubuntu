@@ -97,5 +97,31 @@ Edit the environment variables in the script to your taste.
 
 
 
-# Issues:
-*    Documentation is not compiled
+# Issues with darktable 3.8 on 21.10:
+
+## Exiv2
+21.10 provides exiv2 version 0.27-3, DT requires 0.27-4 ("no support for ISOBMFF files (CR3, AVIF, HEIF)")
+
+## libheif
+I am a bit unclear on "libheif":
+The configuration part of the build issues this
+````
+-- Could NOT find libheif (missing: libheif_DIR)
+````
+
+a bit later it issues this:
+````
+ * libheif (required version >= 1.9.0)
+````
+
+libheif v. 1.11 is installed on 21.10
+````
+    libheif-dev/impish,now 1.11.0-1 amd64 [installed]
+      ISO/IEC 23008-12:2017 HEIF file format decoder - development files
+
+    libheif1/impish,now 1.11.0-1 amd64 [installed,automatic]
+      ISO/IEC 23008-12:2017 HEIF file format decoder - shared library
+````
+
+## docs
+Documentation is not compiled
