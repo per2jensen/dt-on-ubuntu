@@ -125,3 +125,10 @@ libheif v. 1.11 is installed on 21.10
 
 ## docs
 Documentation is not compiled
+  
+# Links
+  [Darktable website](https://www.darktable.org/)
+  
+  [Darktable on github](https://github.com/darktable-org/darktable)
+  
+  [Darktable on Pixls.us](https://discuss.pixls.us/c/software/darktable/19)
