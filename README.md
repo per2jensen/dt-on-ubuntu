@@ -46,8 +46,8 @@ The compile script does the following:
 
 The end result from running "darktable --version", is this: (on the latest DT version)
 ````
-this is darktable 3.8.0
-copyright (c) 2009-2021 johannes hanika
+this is darktable unknown-version
+copyright (c) 2009-2022 johannes hanika
 darktable-dev@lists.darktable.org
 
 compile options:
@@ -64,19 +64,27 @@ compile options:
   OpenEXR support enabled
 
 ````
- 
 
-# How to compile Darktable 3.8.0 for Ubuntu 21.10 in a VM
+*Note* darktable does not report is's version number, even though is has been build from the version 3.8.1
+````
+ubuntu@ubuntu2204-DTcompile:~/git/darktable$ git status
+HEAD detached at release-3.8.1
+nothing to commit, working tree clean
+````
+
+
+
+# How to compile Darktable 3.8.1 for Ubuntu 22.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/21.10
+    cd dt-on-ubuntu/22.04
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 
 
 If you have an old VM lying around and want to start from a fresh, do this.
 
-    multipass stop   ubuntu2110-DTcompile
-    multipass delete ubuntu2110-DTcompile
+    multipass stop   ubuntu2204-DTcompile
+    multipass delete ubuntu2204-DTcompile
     multipass purge 
 
 
@@ -89,41 +97,12 @@ and run the script to enjoy the DT goodness :-)
 
 # How to follow Git Master, to be on the bleeding edge
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/20.10
+    cd dt-on-ubuntu/22.04
     chmod u+x master_compile.sh
     ./master_compile.sh
 
 Edit the environment variables in the script to your taste.
 
-
-
-# Issues with darktable 3.8 on 21.10:
-
-## Exiv2
-21.10 provides exiv2 version 0.27-3, DT requires 0.27-4 ("no support for ISOBMFF files (CR3, AVIF, HEIF)")
-
-[OBS: libexiv2 version 0.27.5 (currently)](https://build.opensuse.org/package/show/graphics:darktable:master/exiv2-non-suse) should be built on ubuntu.
-
-## libheif
-I am a bit unclear on "libheif":
-The configuration part of the build issues this:
-````
--- Could NOT find libheif (missing: libheif_DIR)
-````
-
-a bit later it issues this:
-````
- * libheif (required version >= 1.9.0)
-````
-
-libheif v. 1.11 is installed on 21.10
-````
-    libheif-dev/impish,now 1.11.0-1 amd64 [installed]
-      ISO/IEC 23008-12:2017 HEIF file format decoder - development files
-
-    libheif1/impish,now 1.11.0-1 amd64 [installed,automatic]
-      ISO/IEC 23008-12:2017 HEIF file format decoder - shared library
-````
 
 ## docs
 Documentation is not compiled
