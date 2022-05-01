@@ -52,7 +52,7 @@ then
     echo "3: Package installation failed, exiting"  && exit
 fi 
 
-sudo apt install -y  debhelper libheif-dev libportmidi-dev libsdl2-dev
+sudo apt install -y  dh-make debhelper libheif-dev libportmidi-dev libsdl2-dev
 
 if [ $? != "0" ]
 then
@@ -60,6 +60,7 @@ then
 fi 
 
 
+# libexiv2 v 0.27.5:  https://build.opensuse.org/package/show/graphics:darktable:master/exiv2-non-suse
 
 
 # get the source ready
