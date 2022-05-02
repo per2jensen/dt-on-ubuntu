@@ -1,4 +1,6 @@
-LOG="$HOME/DT38.log"
+#! /bin/bash
+
+source envvars
 
 #########################
 # don't change below
@@ -59,49 +61,55 @@ then
     echo "4: Package installation failed, exiting"  && exit
 fi 
 
+# see here: https://github.blog/2022-04-12-git-security-vulnerability-announced/
+# if installing outside $HOME, prefix next line with sudo
+git config --global --add safe.directory "${DT_SRC_FOLDER}"
 
-# libexiv2 v 0.27.5:  https://build.opensuse.org/package/show/graphics:darktable:master/exiv2-non-suse
-
-
-# get the source ready
-if [[ -d $DT_SRC_FOLDER  ]]; then
-  echo "darktable dir exists"
-  cd $DT_SRC_FOLDER
-  git pull --rebase
-  RESULT=$?
-  if [[ $RESULT != "0" ]]; then
-    echo \"git pull --rebase\" failed, exiting
-    exit 1
-  fi
-else
-  git clone https://github.com/darktable-org/darktable.git $DT_SRC_FOLDER
-  RESULT=$?
-  if [[ $RESULT != "0" ]]; then
-    echo \"git clone\" failed, exiting
-    exit 1
-  fi
-  cd $DT_SRC_FOLDER
+if [[ -d "$DT_SRC_FOLDER"  ]]; then
+    rm -fr "${DT_SRC_FOLDER}"
 fi
-git checkout ${RELEASE}  |tee -a $LOG
-git submodule init  |tee -a $LOG
-git submodule update  |tee -a $LOG
 
+git clone https://github.com/darktable-org/darktable.git "$DT_SRC_FOLDER" 2>&1|tee -a "$LOG" 
+if [[ "${PIPESTATUS[0]}" != "0" ]]; then
+  echo \"git clone\" failed, exiting
+  exit 1
+fi
+
+cd "$DT_SRC_FOLDER"
+git checkout "${RELEASE}" 2>&1|tee -a "$LOG" 
+if [[ "${PIPESTATUS[0]}" != "0" ]]; then
+  echo \"git checkout\" failed, exiting
+  exit 1
+fi
+
+git submodule init   2>&1|tee -a "$LOG"
+if [[ "${PIPESTATUS[0]}" != "0" ]]; then
+  echo \"git submodule init\" failed, exiting
+  exit 1
+fi
+
+git submodule update 2>&1|tee -a "$LOG"
+if [[ "${PIPESTATUS[0]}" != "0" ]]; then
+  echo \"git sumodule update\" failed, exiting
+  exit 1
+fi
 
 # build darktable
-mv ${INSTALL_PREFIX} ${INSTALL_PREFIX}-org
-./build.sh --prefix ${INSTALL_PREFIX} |tee -a $LOG
+mv "${INSTALL_PREFIX}" "${INSTALL_PREFIX}"-org
+./build.sh --prefix "${INSTALL_PREFIX}" 2>&1|tee -a "$LOG"
 if [ "${PIPESTATUS[0]}" != "0" ]
 then
     echo "Build failed, exiting"  && exit
 fi
 
-
+    
 #install darktable
-sudo cmake --build "$DT_SRC_FOLDER/build" --target install -- -j1   |tee -a $LOG
+# if installing outside $HOME, prefix next line with sudo
+cmake --build "$DT_SRC_FOLDER/build" --target install -- -j1  2>&1 |tee -a "$LOG"
 if [ "${PIPESTATUS[0]}" != "0" ]
 then
     echo "Installation failed, exiting"  && exit
 fi
 
 # print --version info
-${INSTALL_PREFIX}/bin/darktable --version  |tee -a $LOG
+"${INSTALL_PREFIX}/bin/darktable" --version  2>&1|tee -a "$LOG"

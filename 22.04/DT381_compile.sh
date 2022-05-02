@@ -5,6 +5,8 @@
 ## Licensed under the Apache License 2.0
 ##
 
+source envvars
+
 # Change this if you want to run the compile script directly on your machine
 # Release to use
 export RELEASE=release-3.8.1
@@ -18,6 +20,5 @@ export DT_SRC_FOLDER="$HOME/git/darktable"
 # the code name for Ubuntu used in LLVM's repos
 export CODENAME_LLVM="jammy"
 
-# FIXME don't hardcode here
-./_compileDT38.sh
+"./$_COMPILE"
 

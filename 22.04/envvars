@@ -1,0 +1,10 @@
+#! /bin/bash
+
+LOG="$HOME/DT38.log"
+
+VM_NAME=ubuntu2204-DTcompile
+VM_SIZE=15G
+VM_IMAGE=22.04
+DT_COMPILE_SCRIPT=DT381_compile.sh
+_COMPILE=_compileDT381.sh
+

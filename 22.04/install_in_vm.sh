@@ -6,11 +6,7 @@
 ## Licensed under the Apache License 2.0
 ##
 
-VM_NAME=ubuntu2204-DTcompile
-VM_SIZE=15G
-VM_IMAGE=22.04
-DT_COMPILE_SCRIPT=DT38_compile.sh
-_COMPILE=_compileDT38.sh
+source envvars
 
 # check if VM exists and is running
 multipass list |grep -E ${VM_NAME}
@@ -38,7 +34,7 @@ else
 fi
 
 echo update OS and start compiling Darktable in virtual machine ${VM_NAME}
-multipass transfer ${DT_COMPILE_SCRIPT} ${_COMPILE} ${VM_NAME}:
+multipass transfer ${DT_COMPILE_SCRIPT} ${_COMPILE} envvars ${VM_NAME}:
 multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT} ${_COMPILE}
 # in VM: install dependencies, compile and install, then print DT's --version info
 multipass exec ${VM_NAME} -- ./${DT_COMPILE_SCRIPT}

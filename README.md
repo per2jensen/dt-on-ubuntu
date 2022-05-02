@@ -44,9 +44,9 @@ The compile script does the following:
 *    builds and install Darktable in the VM
 *    starts Darktable to print the --version info in the VM
 
-The end result from running "darktable --version", is this: (on the latest DT version)
+The end result from running "darktable --version", is this:
 ````
-this is darktable unknown-version
+this is darktable 3.8.1
 copyright (c) 2009-2022 johannes hanika
 darktable-dev@lists.darktable.org
 
@@ -62,17 +62,7 @@ compile options:
   GraphicsMagick support enabled
   ImageMagick support disabled
   OpenEXR support enabled
-
 ````
-
-*Note* darktable does not report is's version number, even though is has been build from the version 3.8.1
-````
-ubuntu@ubuntu2204-DTcompile:~/git/darktable$ git status
-HEAD detached at release-3.8.1
-nothing to commit, working tree clean
-````
-
-
 
 # How to compile Darktable 3.8.1 for Ubuntu 22.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
