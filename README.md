@@ -71,12 +71,21 @@ compile options:
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 
-
-If you have an old VM lying around and want to start from a fresh, do this.
+    If you have an old VM lying around and want to start from a fresh, do this.
 
     multipass stop   ubuntu2204-DTcompile
     multipass delete ubuntu2204-DTcompile
     multipass purge 
+
+
+# Experimental compile of DT 4.0.0 on Ubuntu 20.04
+    I have added an experimental DT 4.0.0 to Ubuntu 20.04
+
+    Issues:
+     - Lua support missing, 20.04 does not satisfy DT4
+     - .heif support probably missing
+     - exiv2 support a bit flaky ("no support for ISOBMFF files (CR3, AVIF, HEIF)"
+
 
 
 ## Build on your machine

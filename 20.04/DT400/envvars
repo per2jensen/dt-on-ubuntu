@@ -1,0 +1,10 @@
+#! /bin/bash
+
+LOG="$HOME/DT40.log"
+
+VM_NAME=ubuntu2004-DTcompile
+VM_SIZE=15G
+VM_IMAGE=20.04
+DT_COMPILE_SCRIPT=DT400_compile.sh
+_COMPILE=_compile.sh
+
