@@ -1,10 +1,10 @@
 #! /bin/bash
 
-LOG="$HOME/DT40.log"
+LOG="$HOME/DT401.log"
 
 VM_NAME=ubuntu2204-DTcompile
 VM_SIZE=15G
 VM_IMAGE=22.04
-DT_COMPILE_SCRIPT=DT400_compile.sh
+DT_COMPILE_SCRIPT=DT40_compile.sh
 _COMPILE=_compile.sh
 

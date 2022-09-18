@@ -5,6 +5,8 @@ workstation :-)
 
 There are 2 ways to install Darktable:
   1. Darktable releases can be installed in a VM for trying it out.
+
+        It is easy to build on your local machine, but trying out in a VM first is nice.
   
   2. Follow Git Master on your computer using the script for that.
 
@@ -44,9 +46,9 @@ The compile script does the following:
 *    builds and install Darktable in the VM
 *    starts Darktable to print the --version info in the VM
 
-The end result from running "darktable --version", is this:
+The end result from running "darktable --version" on the latest supported build, is:
 ````
-this is darktable 4.0.0
+this is darktable 4.0.1
 copyright (c) 2009-2022 johannes hanika
 darktable-dev@lists.darktable.org
 
@@ -65,9 +67,9 @@ compile options:
 
 ````
 
-# How to compile Darktable 4.0.0 for Ubuntu 22.04 in a VM
+# How to compile Darktable 4.0.1 for Ubuntu 22.04 in a VM
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/22.04/DT400
+    cd dt-on-ubuntu/22.04/DT40
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 
