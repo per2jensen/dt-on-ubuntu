@@ -48,9 +48,9 @@ The compile script does the following:
 
 The end result from running "darktable --version" on the latest supported build, is:
 ````
-this is darktable 4.0.1
+this is darktable 4.2.0
 copyright (c) 2009-2022 johannes hanika
-darktable-dev@lists.darktable.org
+https://github.com/darktable-org/darktable/issues/new/choose
 
 compile options:
   bit depth is 64 bit
@@ -58,13 +58,17 @@ compile options:
   SSE2 optimized codepath enabled
   OpenMP support enabled
   OpenCL support enabled
-  Lua support enabled, API version 8.0.0
+  Lua support enabled, API version 9.0.0
   Colord support enabled
   gPhoto2 support enabled
   GraphicsMagick support enabled
   ImageMagick support disabled
+  libavif support enabled
+  libheif support enabled
+  libjxl support disabled
+  OpenJPEG support enabled
   OpenEXR support enabled
-
+  WebP support enabled
 ````
 
 # How to compile Darktable 4.0.1 for Ubuntu 22.04 in a VM
