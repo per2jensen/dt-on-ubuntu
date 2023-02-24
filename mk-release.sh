@@ -2,7 +2,7 @@
 #
 # Make release tar file
 #
-# This is for DT400
+# This is for DT421
 #
 # $1 is the tag to package
 
@@ -22,8 +22,8 @@ if [[ -e "$DIR" ]]; then rm -fr "$DIR" || exit 1; fi
 if [[ -f "/tmp/$TARFILE" ]]; then rm "/tmp/$TARFILE" || exit 1; fi
 
 cd /tmp || exit 1
-#git clone https://github.com/per2jensen/dt-on-ubuntu.git || exit 1
-git clone ~/git/dt-on-ubuntu || exit 1
+git clone https://github.com/per2jensen/dt-on-ubuntu.git || exit 1
+#git clone ~/git/dt-on-ubuntu || exit 1
 cd dt-on-ubuntu || exit 1
 
 git  checkout "tags/$1" -b "release-$1" || exit 1
@@ -34,6 +34,7 @@ rm -fr "$DIR/20.04"
 rm -fr "$DIR/21.04"
 rm -fr "$DIR/21.10"
 rm -fr "$DIR/22.04/DT381"
+rm -fr "$DIR/22.04/DT40"
 rm mk-release.sh
 
 echo "This package is built from tag: $1" > VERSION
