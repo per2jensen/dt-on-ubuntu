@@ -37,7 +37,7 @@ sudo apt install -y  libxml2-utils xsltproc libsaxon-java libpthread-workqueue0 
    liblensfun-dev libcurl4-openssl-dev libjpeg8-dev libtiff-dev liblcms2-dev libjson-glib-dev  \
    libgtk-3-0 libgtk-3-dev libxml2-dev libxml2 librsvg2-2 librsvg2-dev libsqlite3-dev  \
    libexiv2-dev libpugixml-dev lua5.4 liblua5.4-0 liblua5.4-dev libgphoto2-6 libgphoto2-dev colord libcolord-dev  \
-   libgraphicsmagick1-dev imagemagick libmagick++-6.q16-dev libopenexr-dev libopenexr25 desktop-file-utils libgmic-dev libimath-dev libimath-3-1-29
+   libgraphicsmagick1-dev imagemagick libmagick++-6.q16-dev libopenexr-dev libopenexr25 desktop-file-utils libgmic-dev
 if [ $? != "0" ]
 then
     echo "2: Package installation failed, exiting"  && exit
