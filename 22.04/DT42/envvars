@@ -1,6 +1,6 @@
 #! /bin/bash
 
-LOG="$HOME/DT420.log"
+LOG="$HOME/DT421.log"
 
 VM_NAME=ubuntu2204-DTcompile
 VM_SIZE=15G

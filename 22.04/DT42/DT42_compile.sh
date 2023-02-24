@@ -9,7 +9,7 @@ source envvars
 
 # Change this if you want to run the compile script directly on your machine
 # Release to use
-export RELEASE=release-4.2.0
+export RELEASE=release-4.2.1
 
 export VERSION=$(echo $RELEASE|grep -E -o '\-.*')
 export INSTALL_PREFIX="$HOME/programmer/darktable${VERSION}"
