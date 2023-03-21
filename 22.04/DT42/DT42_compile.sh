@@ -20,4 +20,5 @@ export DT_SRC_FOLDER="$HOME/git/darktable"
 # the code name for Ubuntu used in LLVM's repos
 export CODENAME_LLVM="jammy"
 
-"./$_COMPILE"
+# shellcheck source=/dev/null
+source "./$_COMPILE"

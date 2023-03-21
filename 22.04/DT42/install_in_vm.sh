@@ -6,7 +6,32 @@
 ## Licensed under the Apache License 2.0
 ##
 
+# This script by default run the script to install a released version of darktable
+#
+# use the "-m" option to compile darktable master instead in the VM
+
 source envvars
+
+# Get the options
+while [ -n "$1" ]; do
+  case "$1" in
+      --master|-m)
+          DT_COMPILE_SCRIPT=master_compile.sh
+          ;;
+      --help|-h)
+          echo "$0 --help|-h  [--master|-m]"
+          echo " --master|-m, compile darktable master"
+          echo " --help|-h, show this usage info"
+          exit 
+          ;;
+      *)
+          echo option \"$1\" not recognized, exiting
+          exit
+          ;;
+  esac
+  shift
+done
+
 
 # check if VM exists and is running
 multipass list |grep -E ${VM_NAME}
@@ -33,6 +58,7 @@ else
     fi
 fi
 
+echo execute script: \"${DT_COMPILE_SCRIPT}\" in virtual machine ${VM_NAME}
 echo update OS and start compiling Darktable in virtual machine ${VM_NAME}
 multipass transfer ${DT_COMPILE_SCRIPT} ${_COMPILE} envvars ${VM_NAME}:
 multipass exec ${VM_NAME}  -- chmod u+x ${DT_COMPILE_SCRIPT} ${_COMPILE}
