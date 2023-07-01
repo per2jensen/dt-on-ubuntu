@@ -1,0 +1,18 @@
+#! /bin/bash
+
+# Change this if you want to run the compile script directly on your machine
+# Release to use
+export RELEASE=release-4.4.1
+export VERSION=$(echo $RELEASE|grep -E -o '\-.*')
+
+
+export LOG="$HOME/DT${VERSION}.log"
+export INSTALL_PREFIX="$HOME/programmer/darktable${VERSION}"
+
+
+VM_NAME=ubuntu2304-DTcompile
+VM_SIZE=15G
+VM_IMAGE=23.04
+DT_COMPILE_SCRIPT=DTcompile.sh
+_COMPILE=_compile.sh
+
