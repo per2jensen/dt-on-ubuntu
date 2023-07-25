@@ -48,7 +48,7 @@ The compile script does the following:
 
 The end result from running "darktable --version" on the latest supported build, is:
 ````
-this is darktable 4.2.1
+this is darktable 4.4.2
 copyright (c) 2009-2023 johannes hanika
 https://github.com/darktable-org/darktable/issues/new/choose
 
@@ -58,35 +58,30 @@ compile options:
   SSE2 optimized codepath enabled
   OpenMP support enabled
   OpenCL support enabled
-  Lua support enabled, API version 9.0.0
+  Lua support enabled, API version 9.1.0
   Colord support enabled
   gPhoto2 support enabled
   GraphicsMagick support enabled
   ImageMagick support disabled
   libavif support enabled
-  libheif support disabled
-  libjxl support disabled
+  libheif support enabled
+  libjxl support enabled
   OpenJPEG support enabled
   OpenEXR support enabled
   WebP support enabled
 ````
-# Issues on Ubuntu 22.04
 
- - libheif: Ubuntu 22.04 provides libheif: version "1.12.0", DT 4.2.1 requires >= 1.13.0
- - lijxl:   requires Ubuntu 23.04 according to https://github.com/libjxl/libjxl
- 
-
-# How to compile Darktable 4.2.1 for Ubuntu 22.04 in a VM
+# How to compile Darktable 4.2.2 for Ubuntu 23.04 in a VM
 ````
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/22.04/DT42
+    cd dt-on-ubuntu/23.04/DT42
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 ````
     If you have an old VM lying around and want to start from a fresh, do this:
 ````
-    multipass stop   ubuntu2204-DTcompile
-    multipass delete ubuntu2204-DTcompile
+    multipass stop   ubuntu2304-DTcompile
+    multipass delete ubuntu2304-DTcompile
     multipass purge 
 ````
 
