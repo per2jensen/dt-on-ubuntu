@@ -103,7 +103,7 @@ less DT-4.6.0.log
 
 # Output from 'configure'
 
-The full log file has been saved in git ("[DT-4.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/23.04/DT44/_compile.sh])", for viewing if you are interested
+The full log file has been saved in git ("[DT-4.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/23.10/DT46/doc/DT-4.6.0.log)", for viewing if you are interested
 
 ````
 -- ----------------------------------------------------------------------------------
