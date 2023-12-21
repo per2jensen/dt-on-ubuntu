@@ -1,0 +1,2569 @@
+Start configuring DT....
+Thu Dec 21 09:44:24 CET 2023
+INSTALL_PREFIX:  /home/ubuntu/programmer/darktable-4.6.0
+.
+Cloning into '/home/ubuntu/git/darktable'...
+Note: switching to 'release-4.6.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at b59cb9ada5 Add entry for 4.6 release.
+Submodule 'src/external/LibRaw' (https://github.com/LibRaw/LibRaw.git) registered for path 'src/external/LibRaw'
+Submodule 'src/external/OpenCL' (https://github.com/KhronosGroup/OpenCL-Headers.git) registered for path 'src/external/OpenCL'
+Submodule 'src/external/libxcf' (https://github.com/houz/libxcf.git) registered for path 'src/external/libxcf'
+Submodule 'src/external/rawspeed' (https://github.com/darktable-org/rawspeed.git) registered for path 'src/external/rawspeed'
+Submodule 'src/external/whereami' (https://github.com/gpakosz/whereami) registered for path 'src/external/whereami'
+Submodule 'src/tests/integration' (https://github.com/darktable-org/darktable-tests.git) registered for path 'src/tests/integration'
+Cloning into '/home/ubuntu/git/darktable/src/external/LibRaw'...
+Cloning into '/home/ubuntu/git/darktable/src/external/OpenCL'...
+Cloning into '/home/ubuntu/git/darktable/src/external/libxcf'...
+Cloning into '/home/ubuntu/git/darktable/src/external/rawspeed'...
+Cloning into '/home/ubuntu/git/darktable/src/external/whereami'...
+Cloning into '/home/ubuntu/git/darktable/src/tests/integration'...
+Submodule path 'src/external/LibRaw': checked out 'cccb97647fcee56801fa68231fa8a38aa8b52ef7'
+Submodule path 'src/external/OpenCL': checked out '4fdcfb0ae675f2f63a9add9552e0af62c2b4ed30'
+Submodule path 'src/external/libxcf': checked out '64efecf63ddd952ccf654e479714aaae6f8c5986'
+Submodule path 'src/external/rawspeed': checked out '1e505de7d785afe3e9decb708c32ca3ffa6d8545'
+Submodule path 'src/external/whereami': checked out 'e07bc35ecd92ee4c3ac71cf0fb6b01132bfa50de'
+Submodule path 'src/tests/integration': checked out '8b8a87b004cc1f77c4a7013615d6d17eba39efba'
+darktable build script
+
+Building directory:  /home/ubuntu/git/darktable/build
+Installation prefix: /home/ubuntu/programmer/darktable-4.6.0
+Build type:          RelWithDebInfo
+Build generator:     Unix Makefiles
+Build tasks:         1
+
+-- The CXX compiler identification is GNU 13.2.0
+-- The C compiler identification is GNU 13.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found OpenMP_C: -fopenmp (found suitable version "4.5", minimum required is "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found suitable version "4.5", minimum required is "4.5") 
+-- Found OpenMP: TRUE (found suitable version "4.5", minimum required is "4.5")  
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Performing Test IS_SUPPORTED_PLATFORM
+-- Performing Test IS_SUPPORTED_PLATFORM - Success
+-- Looking for cpuid.h
+-- Looking for cpuid.h - found
+-- Looking for __get_cpuid
+-- Looking for __get_cpuid - found
+-- Looking for execinfo.h
+-- Looking for execinfo.h - found
+-- Performing Test HAVE_OMP_FIRSTPRIVATE_WITH_CONST
+-- Performing Test HAVE_OMP_FIRSTPRIVATE_WITH_CONST - Success
+-- Performing Test HAVE_THREAD_RWLOCK_ARCH_T_READERS
+-- Performing Test HAVE_THREAD_RWLOCK_ARCH_T_READERS - Success
+-- Performing Test HAVE_THREAD_RWLOCK_ARCH_T_NR_READERS
+-- Performing Test HAVE_THREAD_RWLOCK_ARCH_T_NR_READERS - Failed
+-- Performing Test _MSSE2
+-- Performing Test _MSSE2 - Success
+-- Building SSE2-optimized codepaths: ON
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wall
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wall - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wall
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wall - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wformat
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wformat - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wformat
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wformat - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wformat-security
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wformat-security - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wformat-security
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wformat-security - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wshadow
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wshadow - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wshadow
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wshadow - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wtype-limits
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wtype-limits - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wtype-limits
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wtype-limits - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wvla
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wvla - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wvla
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wvla - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wold-style-declaration
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wold-style-declaration - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wthread-safety
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wthread-safety - Failed
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wthread-safety
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wthread-safety - Failed
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wmaybe-uninitialized
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wmaybe-uninitialized - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wmaybe-uninitialized
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wmaybe-uninitialized - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-unknown-pragmas
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-unknown-pragmas - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-unknown-pragmas
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-unknown-pragmas - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-error=varargs
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-error=varargs - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-error=varargs
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-error=varargs - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-format-truncation
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-format-truncation - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-format-truncation
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-format-truncation - Success
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-error=address-of-packed-member
+-- Performing Test C_COMPILER_UNDERSTANDS_-Wno-error=address-of-packed-member - Success
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-error=address-of-packed-member
+-- Performing Test CXX_COMPILER_UNDERSTANDS_-Wno-error=address-of-packed-member - Success
+-- Looking for external programs
+-- Found perl
+-- Found intltool-merge
+-- Found desktop-file-validate
+-- Performing Test HAVE_FFI_CALL
+-- Performing Test HAVE_FFI_CALL - Success
+-- Found FFI: /usr/lib/x86_64-linux-gnu/libffi.so  
+-- Performing Test Terminfo_LINKABLE
+-- Performing Test Terminfo_LINKABLE - Success
+-- Found Terminfo: /usr/lib/x86_64-linux-gnu/libtinfo.so  
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.13")  
+-- Found zstd: /usr/lib/x86_64-linux-gnu/libzstd.so  
+-- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found version "2.9.14") 
+-- Found LLVM 15.0.7
+-- Found clang compiler - /usr/bin/clang-15
+-- Found clang opencl-c.h header in /usr/lib/llvm-15/lib/clang/15.0.7/include
+-- Will be able to test-compile OpenCL programs. Nice.
+-- Found jsonschema
+-- Found xsltproc
+-- Found xmllint
+-- Found exiftool
+-- All external programs found
+-- Found Gettext: /usr/bin/msgmerge (found version "0.21") 
+-- Found msgfmt to convert .po file. Translation enabled
+-- The following OPTIONAL packages have been found:
+
+ * FFI
+ * Terminfo
+ * zstd
+ * LibXml2
+ * LLVM
+ * Gettext
+
+-- The following REQUIRED packages have been found:
+
+ * OpenMP (required version >= 4.5)
+ * Threads
+ * ZLIB
+
+-- Checking for -march=native support
+-- Performing Test MARCHNATIVE
+-- Performing Test MARCHNATIVE - Success
+-- Checking for -march=native support - works
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WALL
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WALL - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WEXTRA
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WEXTRA - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WCAST_QUAL
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WCAST_QUAL - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WEXTRA_SEMI
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WEXTRA_SEMI - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WFORMAT_2
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WFORMAT_2 - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WPOINTER_ARITH
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WPOINTER_ARITH - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WVLA
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WVLA - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WMISSING_FORMAT_ATTRIBUTE
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WMISSING_FORMAT_ATTRIBUTE - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WSUGGEST_ATTRIBUTE_FORMAT
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WSUGGEST_ATTRIBUTE_FORMAT - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WNO_UNUSED_PARAMETER
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WNO_UNUSED_PARAMETER - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WSTACK_USAGE_4096
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WSTACK_USAGE_4096 - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WFRAME_LARGER_THAN_4096
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WFRAME_LARGER_THAN_4096 - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WLARGER_THAN_32768
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WLARGER_THAN_32768 - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WERROR
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WERROR - Success
+-- Looking for OpenMP
+-- Found OpenMP_C: -fopenmp (found suitable version "4.5", minimum required is "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found suitable version "4.5", minimum required is "4.5") 
+-- Looking for OpenMP - found (system)
+-- Looking for pugixml
+-- Found Pugixml 1.14
+-- Looking for pugixml - found (system)
+-- Looking for JPEG
+-- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+-- Looking for JPEG - found
+-- Looking for jpeg_mem_src
+-- Looking for jpeg_mem_src - found
+-- Looking for ZLIB
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found suitable version "1.2.13", minimum required is "1.2.11")  
+-- Looking for C++ include zlib.h
+-- Looking for C++ include zlib.h - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of uLongf
+-- Check size of uLongf - done
+-- Looking for Z_OK
+-- Looking for Z_OK - found
+-- Checking prototype uncompress for HAVE_ZLIB_UNCOMPRESS_PROTOTYPE
+-- Checking prototype uncompress for HAVE_ZLIB_UNCOMPRESS_PROTOTYPE - True
+-- Checking prototype zError for HAVE_ZLIB_ZERROR_PROTOTYPE
+-- Checking prototype zError for HAVE_ZLIB_ZERROR_PROTOTYPE - True
+-- Looking for uncompress
+-- Looking for uncompress - found
+-- Looking for zError
+-- Looking for zError - found
+-- Looking for ZLIB - found (system)
+-- Performing Test HAVE_CXX_THREAD_LOCAL
+-- Performing Test HAVE_CXX_THREAD_LOCAL - Success
+-- Trying to query CPU L1d cache line size
+-- Deciding that the CPU L1d cache line size is 64 bytes
+-- Trying to query CPU page size
+-- Deciding that the CPU page size is 4096 bytes
+-- Trying to query CPU large page size
+-- Deciding that the CPU large page size is 2097152 bytes
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WNO_GLOBAL_CONSTRUCTORS
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WNO_GLOBAL_CONSTRUCTORS - Success
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WNO_EXIT_TIME_DESTRUCTORS
+-- Performing Test RAWSPEED_HAVE_CXX_FLAG_WNO_EXIT_TIME_DESTRUCTORS - Success
+-- Found XMLLINT: /usr/bin/xmllint  
+-- The following features have been enabled:
+
+ * OpenMP-based threading, used for parallelization of the library
+ * XML reading, used for loading of data/cameras.xml
+ * Lossy JPEG decoding, used for DNG Lossy JPEG compression decoding
+ * ZLIB decoding, used for DNG Deflate compression decoding
+
+-- The following OPTIONAL packages have been found:
+
+ * FFI
+ * Terminfo
+ * zstd
+ * LibXml2
+ * LLVM
+ * Gettext
+ * XMLLINT, command line XML tool, <http://xmlsoft.org/>
+   Used for validation of data/cameras.xml
+
+-- The following RECOMMENDED packages have been found:
+
+ * JPEG, free library for handling the JPEG image data format, implements a JPEG codec
+   Used for decoding DNG Lossy JPEG compression
+
+-- The following REQUIRED packages have been found:
+
+ * Threads
+ * OpenMP (required version >= 4.5), Open Multi-Processing, <https://www.openmp.org/>
+   Used for parallelization of the library
+ * Pugixml (required version >= 1.8), Light-weight, simple and fast XML parser, <http://pugixml.org/>
+   Used for loading of data/cameras.xml
+ * ZLIB (required version >= 1.2.11), software library used for data compression
+   Used for decoding DNG Deflate compression
+
+-- Found Glib 2.78.0
+-- Found PkgConfig: /usr/bin/pkg-config (found version "1.8.1") 
+-- Checking for module 'gtk+-3.0'
+--   Found gtk+-3.0, version 3.24.38
+-- Found GTK3: /usr/include/gtk-3.0;/usr/include/pango-1.0;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/harfbuzz;/usr/include/freetype2;/usr/include/libpng16;/usr/include/libmount;/usr/include/blkid;/usr/include/fribidi;/usr/include/cairo;/usr/include/pixman-1;/usr/include/gdk-pixbuf-2.0;/usr/include/x86_64-linux-gnu;/usr/include/gio-unix-2.0;/usr/include/atk-1.0;/usr/include/at-spi2-atk/2.0;/usr/include/at-spi-2.0;/usr/include/dbus-1.0;/usr/lib/x86_64-linux-gnu/dbus-1.0/include (Required is at least version "3.24.15") 
+-- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found suitable version "2.9.14", minimum required is "2.6") 
+-- Found Gphoto2: /usr/lib/x86_64-linux-gnu/libgphoto2.so (Required is at least version "2.5") 
+-- The imported target "Imath::PyImath_Python3_11" references the file
+   "/usr/lib/x86_64-linux-gnu/libPyImath_Python3_11-3_1.so.29.5.0"
+but this file does not exist.  Possible reasons include:
+* The file was deleted, renamed, or moved to another location.
+* An install or uninstall procedure did not complete successfully.
+* The installation package was faulty and contained
+   "/usr/lib/x86_64-linux-gnu/cmake/Imath/ImathTargets.cmake"
+but not all the files it references.
+
+-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.13")  
+-- Found JXL: /usr/lib/x86_64-linux-gnu/libjxl.so (found suitable version "0.7.0", minimum required is "0.7.0") 
+-- Found WebP: /usr/lib/x86_64-linux-gnu/libwebp.so;/usr/lib/x86_64-linux-gnu/libwebpmux.so (Required is at least version "0.3.0") 
+-- Building LibRaw from intree copy
+-- Found LensFun: /usr/lib/x86_64-linux-gnu/liblensfun.so  
+-- Found Sqlite3 3.42.0
+-- Sqlite3 version 3.24 or newer
+-- Found GIO 
+-- Found GThread: /usr/lib/x86_64-linux-gnu/libgthread-2.0.so  
+-- Found GModule: /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so  
+-- Found PangoCairo: /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so  
+-- Found Rsvg2: /usr/lib/x86_64-linux-gnu/librsvg-2.so  
+-- Found LibXml2: /usr/lib/x86_64-linux-gnu/libxml2.so (found version "2.9.14") 
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.2.1")  
+-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.40") 
+-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.5.1")  
+-- Found LCMS2: /usr/lib/x86_64-linux-gnu/liblcms2.so  
+-- Found JsonGlib 
+-- Found Exiv2: /usr/lib/x86_64-linux-gnu/libexiv2.so (Required is at least version "0.25") 
+-- Looking for EXV_ENABLE_BMFF
+-- Looking for EXV_ENABLE_BMFF - found
+-- Exiv2 >= 0.27.4 found with ISOBMFF support (CR3, AVIF, HEIF)
+-- Found PortMidi: /usr/lib/x86_64-linux-gnu/libportmidi.so  
+-- Found OpenJPEG 
+-- Checking for module 'iso-codes'
+--   Found iso-codes, version 4.15.0
+-- Found Libsecret: /usr/include/libsecret-1;/usr/include/glib-2.0;/usr/lib/x86_64-linux-gnu/glib-2.0/include;/usr/include/libmount;/usr/include/blkid;/usr/include/gio-unix-2.0  
+-- Found GraphicsMagick 1.3.42
+-- Performing Test GMIC_VERSION_OK
+-- Performing Test GMIC_VERSION_OK - Success
+-- Found GMIC 
+-- Found the following ICU libraries:
+--   i18n (required): /usr/lib/x86_64-linux-gnu/libicui18n.so
+--   data (required): /usr/lib/x86_64-linux-gnu/libicudata.so
+--   uc (required): /usr/lib/x86_64-linux-gnu/libicuuc.so
+-- Found ICU: /usr/include (found version "72.1") 
+-- Performing Test HAVE_BUILTIN_CPU_SUPPORTS
+-- Performing Test HAVE_BUILTIN_CPU_SUPPORTS - Success
+-- Does the compiler support __builtin_cpu_supports(): 1
+-- Performing Test HAVE_TLS
+-- Performing Test HAVE_TLS - Success
+-- Checking for -march=native support
+-- Lua support: Enabled
+-- Found Pugixml 1.14
+-- Map mode: enabled
+-- Found Cups: /usr/lib/x86_64-linux-gnu/libcups.so (found version "2.4.6") 
+-- Print mode: enabled
+-- Game: the good knight
+-- Signal debug: print-trace possible
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found suitable version "8.2.1", minimum required is "7.56")  
+-- Found recent CURL version to build piwigo.
+-- Found X11: /usr/include   
+-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so
+-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found
+-- Looking for gethostbyname
+-- Looking for gethostbyname - found
+-- Looking for connect
+-- Looking for connect - found
+-- Looking for remove
+-- Looking for remove - found
+-- Looking for shmat
+-- Looking for shmat - found
+-- Looking for IceConnectionNumber in ICE
+-- Looking for IceConnectionNumber in ICE - found
+-- building darktable-cmstest with colord support. nice.
+-- LibRaw string version: 0.21.1
+-- LibRaw ID version:     0x0211
+-- LibRaw SO version:     23.0.0
+-- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_CXX: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
+-- 
+-- ----------------------------------------------------------------------------------
+--  Libraw 0.21.1 configuration            <http://www.libraw.org>
+-- 
+--  Libraw will be compiled with OpenMP support .................. YES
+--  Libraw will be compiled with LCMS support .................... NO
+--  Libraw will be compiled with example command-line programs ... NO
+--  Libraw will be compiled with RedCine codec support ........... NO
+--  Libraw will be compiled with DNG deflate codec support ....... YES
+--  Libraw will be compiled with DNG lossy codec support ......... YES
+--  Libraw will be compiled with RawSpeed support ................ NO
+--  Libraw will be compiled with debug message from dcraw ........ NO
+--  Libraw will be compiled with Foveon X3F support .............. NO
+--  Libraw will be compiled with Raspberry Pi RAW support ........ NO
+--  Libraw will be compiled as a static library
+-- ----------------------------------------------------------------------------------
+-- 
+Missing po4a-translate. Can NOT create translated manpages
+Missing po4a-updatepo. Can NOT update manpage translations
+-- The following features have been enabled:
+
+ * OpenMP-based threading, used for parallelization of the library
+ * XML reading, used for loading of data/cameras.xml
+ * Lossy JPEG decoding, used for DNG Lossy JPEG compression decoding
+ * ZLIB decoding, used for DNG Deflate compression decoding
+
+-- The following OPTIONAL packages have been found:
+
+ * FFI
+ * Terminfo
+ * zstd
+ * LLVM
+ * Gettext
+ * XMLLINT, command line XML tool, <http://xmlsoft.org/>
+   Used for validation of data/cameras.xml
+ * Gphoto2 (required version >= 2.5)
+ * OpenEXR (required version >= 3.0)
+ * JXL (required version >= 0.7.0)
+ * WebP (required version >= 0.3.0)
+ * libavif
+ * libheif
+ * PortMidi, Portable MIDI library, <https://github.com/PortMidi/portmidi>
+   Used for hardware MIDI input devices
+ * OpenJPEG
+ * IsoCodes (required version >= 3.66)
+ * Libsecret
+ * GraphicsMagick
+ * GMIC
+ * ICU
+ * Lua54 (required version >= 5.4)
+ * OSMGpsMap
+ * Colord
+ * ColordGTK
+ * Cups
+ * SDL2, low level access to audio, keyboard, mouse, joystick, and graphics hardware, <https://www.libsdl.org/>
+ * X11
+
+-- The following REQUIRED packages have been found:
+
+ * GTK3 (required version >= 3.24.15)
+ * Threads
+ * Imath
+ * LensFun
+ * Sqlite3 (required version >= 3.15)
+ * GIO
+ * GThread
+ * GModule
+ * PangoCairo
+ * Rsvg2
+ * LibXml2
+ * PNG
+ * TIFF
+ * LCMS2
+ * JsonGlib
+ * Exiv2 (required version >= 0.25)
+ * Pugixml (required version >= 1.2), Light-weight, simple and fast XML parser, <http://pugixml.org/>
+   Used for loading of data/cameras.xml
+ * CURL (required version >= 7.56)
+ * Glib
+ * ZLIB, software library used for data compression
+   Used for decoding DNG Deflate compression
+ * JPEG, free library for handling the JPEG image data format, implements a JPEG codec
+   Used for decoding DNG Lossy JPEG compression
+ * OpenMP, Open Multi-Processing, <https://www.openmp.org/>
+   Used for parallelization of the library
+
+-- Configuring done (9.0s)
+-- Generating done (2.0s)
+-- Build files have been written to: /home/ubuntu/git/darktable/build
+[  0%] Updating version string (git checkout)
+Version string: 4.6.0
+[  0%] Built target create_version_gen
+[  0%] Built target generate_version
+[  0%] Building zh_TW locale
+4901 translated messages.
+[  0%] Built target locale_zh_TW
+[  0%] Building cs locale
+4900 translated messages.
+[  0%] Built target locale_cs
+[  0%] Building de locale
+4900 translated messages.
+[  0%] Built target locale_de
+[  0%] Building en@truecase locale
+4900 translated messages.
+[  0%] Built target locale_en-truecase
+[  1%] Building es locale
+4899 translated messages.
+[  1%] Built target locale_es
+[  1%] Building fi locale
+4900 translated messages.
+[  1%] Built target locale_fi
+[  1%] Building fr locale
+4900 translated messages.
+[  1%] Built target locale_fr
+[  1%] Building hu locale
+4900 translated messages.
+[  1%] Built target locale_hu
+[  1%] Building it locale
+4898 translated messages, 1 fuzzy translation.
+[  1%] Built target locale_it
+[  1%] Building ja locale
+4900 translated messages.
+[  1%] Built target locale_ja
+[  1%] Building nl locale
+4900 translated messages.
+[  1%] Built target locale_nl
+[  1%] Building pl locale
+4884 translated messages, 12 fuzzy translations, 4 untranslated messages.
+[  1%] Built target locale_pl
+[  1%] Building pt_BR locale
+4900 translated messages.
+[  1%] Built target locale_pt_BR
+[  1%] Building ru locale
+4900 translated messages.
+[  1%] Built target locale_ru
+[  2%] Building sl locale
+4900 translated messages.
+[  2%] Built target locale_sl
+[  2%] Building sq locale
+4900 translated messages.
+[  2%] Built target locale_sq
+[  2%] Building uk locale
+4900 translated messages.
+[  2%] Built target locale_uk
+[  2%] Building zh_CN locale
+4900 translated messages.
+[  2%] Built target locale_zh_CN
+[  2%] Built target locales
+[  3%] Checking validity of /home/ubuntu/git/darktable/build/share/darktable/darktableconfig.xml
+[  3%] Built target validate_darktableconfig_xml
+[  3%] Generating configuration min/max/default/type
+[  3%] Built target generate_conf
+[  3%] Generating preferences
+[  3%] Built target generate_preferences
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/canon_600.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/crx.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/decoders_dcraw.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/decoders_libraw.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/decoders_libraw_dcrdefs.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/dng.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/fp_dng.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/fuji_compressed.cpp.o
+[  3%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/generic.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/kodak_decoders.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/load_mfbacks.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/smal.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/unpack.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/decoders/unpack_thumb.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/demosaic/aahd_demosaic.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/demosaic/ahd_demosaic.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/demosaic/dcb_demosaic.cpp.o
+[  4%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/demosaic/dht_demosaic.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/demosaic/misc_demosaic.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/demosaic/xtrans_demosaic.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/integration/dngsdk_glue.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/integration/rawspeed_glue.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/libraw_c_api.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/libraw_datastream.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/adobepano.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/canon.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/ciff.cpp.o
+[  5%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/cr3_parser.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/epson.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/exif_gps.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/fuji.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/hasselblad_model.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/identify.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/identify_tools.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/kodak.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/leica.cpp.o
+[  6%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/makernotes.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/mediumformat.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/minolta.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/misc_parsers.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/nikon.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/normalize_model.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/olympus.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/p1.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/pentax.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/samsung.cpp.o
+[  7%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/sony.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/metadata/tiff.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/postprocessing/aspect_ratio.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/postprocessing/dcraw_process.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/postprocessing/mem_image.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/postprocessing/postprocessing_aux.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/postprocessing/postprocessing_utils.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/postprocessing/postprocessing_utils_dcrdefs.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/preprocessing/ext_preprocess.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/preprocessing/raw2image.cpp.o
+[  8%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/preprocessing/subtract_black.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/tables/cameralist.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/tables/colorconst.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/tables/colordata.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/tables/wblists.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/curves.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/decoder_info.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/init_close_utils.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/open.cpp.o
+[  9%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/phaseone_processing.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/read_utils.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/thumb_utils.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/utils_dcraw.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/utils/utils_libraw.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/write/apply_profile.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/write/file_write.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/write/tiff_writer.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/x3f/x3f_parse_process.cpp.o
+[ 10%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw.dir/__/LibRaw/src/x3f/x3f_utils_patched.cpp.o
+[ 10%] Linking CXX static library libraw.a
+[ 10%] Built target raw
+[ 10%] Checking validity of cameras.xml
+/home/ubuntu/git/darktable/src/external/rawspeed/data/cameras.xml validates
+[ 10%] Built target validate-cameras.xml
+[ 10%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/ChecksumFile.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/Common.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/Cpuid.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/DngOpcodes.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/ErrorLog.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/GetNumberOfProcessorCores.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/RawImage.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/RawImageDataFloat.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/RawImageDataU16.cpp.o
+[ 11%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/RawspeedException.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/common/TableLookUp.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/metadata/Camera.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/metadata/CameraMetaData.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/metadata/CameraMetadataException.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/metadata/CameraSensorInfo.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/metadata/ColorFilterArray.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/io/BitStream.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/io/FileIOException.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/io/FileReader.cpp.o
+[ 12%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/io/FileWriter.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/io/IOException.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/tiff/CiffEntry.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/tiff/CiffIFD.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/tiff/TiffEntry.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/tiff/TiffIFD.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/CiffParser.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/CiffParserException.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/FiffParser.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/FiffParserException.cpp.o
+[ 13%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/RawParser.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/RawParserException.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/TiffParser.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/parsers/TiffParserException.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/AbstractDngDecompressor.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/AbstractLJpegDecoder.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/Cr2Decompressor.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/Cr2LJpegDecoder.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/CrwDecompressor.cpp.o
+[ 14%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/DeflateDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/FujiDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/HasselbladDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/HasselbladLJpegDecoder.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/JpegDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/KodakDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/LJpegDecoder.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/LJpegDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/NikonDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/OlympusDecompressor.cpp.o
+[ 15%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/PanasonicV4Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/PanasonicV5Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/PanasonicV6Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/PanasonicV7Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/PentaxDecompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/PhaseOneDecompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/SamsungV0Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/SamsungV1Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/SamsungV2Decompressor.cpp.o
+[ 16%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/SonyArw1Decompressor.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/SonyArw2Decompressor.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/UncompressedDecompressor.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decompressors/VC5Decompressor.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/interpolators/Cr2sRawInterpolator.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/AbstractTiffDecoder.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/ArwDecoder.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/Cr2Decoder.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/CrwDecoder.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/DcrDecoder.cpp.o
+[ 17%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/DcsDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/DngDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/ErfDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/IiqDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/KdcDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/MefDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/MosDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/MrwDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/NakedDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/NefDecoder.cpp.o
+[ 18%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/OrfDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/PefDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/RafDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/RawDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/RawDecoderException.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/Rw2Decoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/SimpleTiffDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/SrwDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/StiDecoder.cpp.o
+[ 19%] Building CXX object lib/darktable/rawspeed/CMakeFiles/rawspeed.dir/src/librawspeed/decoders/ThreefrDecoder.cpp.o
+[ 20%] Linking CXX static library librawspeed.a
+[ 20%] Built target rawspeed
+[ 20%] Building CXX object bin/CMakeFiles/lib_darktable_imageio_rawspeed.dir/imageio/imageio_rawspeed.cc.o
+[ 20%] Linking CXX static library liblib_darktable_imageio_rawspeed.a
+[ 20%] Built target lib_darktable_imageio_rawspeed
+[ 20%] Generating authors.h for about dialog.
+[ 20%] Built target generate_authors_h
+[ 20%] Building C object bin/external/CMakeFiles/whereami.dir/whereami/src/whereami.c.o
+[ 20%] Linking C static library libwhereami.a
+[ 20%] Built target whereami
+[ 20%] Building C object bin/external/LuaAutoC/CMakeFiles/lautoc.dir/lautoc.c.o
+[ 20%] Linking C static library liblautoc.a
+[ 20%] Built target lautoc
+[ 20%] Building C object bin/CMakeFiles/lib_darktable.dir/version_gen.c.o
+[ 20%] Building C object bin/CMakeFiles/lib_darktable.dir/bauhaus/bauhaus.c.o
+[ 20%] Building C object bin/CMakeFiles/lib_darktable.dir/common/act_on.c.o
+[ 20%] Building C object bin/CMakeFiles/lib_darktable.dir/common/atomic.c.o
+[ 20%] Building C object bin/CMakeFiles/lib_darktable.dir/common/bilateral.c.o
+[ 20%] Building C object bin/CMakeFiles/lib_darktable.dir/common/bilateralcl.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/box_filters.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/cache.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/calculator.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/collection.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/color_harmony.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/color_picker.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/color_vocabulary.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/colorlabels.c.o
+[ 21%] Building C object bin/CMakeFiles/lib_darktable.dir/common/colorspaces.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/curl_tools.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/curve_tools.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/custom_primaries.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/darktable.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/database.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/datetime.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/dbus.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/distance_transform.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/dlopencl.c.o
+[ 22%] Building C object bin/CMakeFiles/lib_darktable.dir/common/dng_opcode.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/dtpthread.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/dwt.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/dynload.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/eaw.c.o
+[ 23%] Building CXX object bin/CMakeFiles/lib_darktable.dir/common/exif.cc.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/file_location.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/film.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/gaussian.c.o
+[ 23%] Building C object bin/CMakeFiles/lib_darktable.dir/common/gpx.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/grouping.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/guided_filter.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/heal.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/histogram.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/history.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/history_snapshot.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/image.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/image_cache.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/image_compression.c.o
+[ 24%] Building C object bin/CMakeFiles/lib_darktable.dir/common/imagebuf.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/import_session.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/interpolation.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/iop_group.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/iop_order.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/iop_profile.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/l10n.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/locallaplacian.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/locallaplaciancl.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/map_locations.c.o
+[ 25%] Building C object bin/CMakeFiles/lib_darktable.dir/common/matrices.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/metadata.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/metadata_export.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/mipmap_cache.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/module.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/nlmeans_core.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/noiseprofiles.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/opencl.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/pdf.c.o
+[ 26%] Building C object bin/CMakeFiles/lib_darktable.dir/common/presets.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/pwstorage/backend_kwallet.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/pwstorage/pwstorage.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/ratings.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/resource_limits.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/selection.c.o
+[ 27%] Building CXX object bin/CMakeFiles/lib_darktable.dir/common/splines.cpp.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/styles.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/system_signal_handling.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/tags.c.o
+[ 27%] Building C object bin/CMakeFiles/lib_darktable.dir/common/undo.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/common/usermanual_url.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/common/utility.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/common/variables.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/common/wb_presets.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/control/conf.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/control/control.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/control/crawler.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/control/jobs.c.o
+[ 28%] Building C object bin/CMakeFiles/lib_darktable.dir/control/jobs/control_jobs.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/control/jobs/develop_jobs.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/control/jobs/film_jobs.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/control/jobs/image_jobs.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/control/progress.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/control/signal.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/blend.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/blend_gui.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/blends/blendif_lab.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/blends/blendif_raw.c.o
+[ 29%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/blends/blendif_rgb_hsl.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/blends/blendif_rgb_jzczhz.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/borders_helper.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/develop.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/format.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/imageop.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/imageop_gui.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/imageop_math.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/lightroom.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/brush.c.o
+[ 30%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/circle.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/ellipse.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/gradient.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/group.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/masks.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/masks/path.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/pixelpipe.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/develop/tiling.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/button.c.o
+[ 31%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/culling.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/drawingarea.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/expander.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/gradientslider.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/icon.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/paint.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/range.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/resetlabel.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/sidepanel.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/thumbnail.c.o
+[ 32%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/thumbnail_btn.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/thumbtable.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/dtgtk/togglebutton.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/about.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/accelerators.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/color_picker_proxy.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/gtk.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/gtkentry.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/guides.c.o
+[ 33%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/hist_dialog.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/import_metadata.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/preferences.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/presets.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/gui/styles_dialog.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_gm.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_im.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_jpeg.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_module.c.o
+[ 34%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_pfm.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_png.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_pnm.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_qoi.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_rgbe.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_tiff.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/libs/lib.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/views/view.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/common/camera_control.c.o
+[ 35%] Building C object bin/CMakeFiles/lib_darktable.dir/control/jobs/camera_jobs.c.o
+[ 36%] Building CXX object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_exr.cc.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_jpegxl.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_webp.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_avif.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_heif.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_libraw.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/imageio/imageio_j2k.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/common/pwstorage/backend_libsecret.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/common/sqliteicu.c.o
+[ 36%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/cairo.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/call.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/configuration.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/database.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/events.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/film.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/format.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/gettext.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/glist.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/gui.c.o
+[ 37%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/guides.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/image.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/init.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/lib.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/lua.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/lualib.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/luastorage.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/modules.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/password.c.o
+[ 38%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/preferences.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/print.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/storage.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/styles.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/tags.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/types.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/view.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/box.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/button.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/check_button.c.o
+[ 39%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/combobox.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/container.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/entry.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/file_chooser.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/label.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/section_label.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/separator.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/slider.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/stack.c.o
+[ 40%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/text_view.c.o
+[ 41%] Building C object bin/CMakeFiles/lib_darktable.dir/lua/widget/widget.c.o
+[ 41%] Building C object bin/CMakeFiles/lib_darktable.dir/common/cups_print.c.o
+[ 41%] Building C object bin/CMakeFiles/lib_darktable.dir/common/printing.c.o
+[ 41%] Building C object bin/CMakeFiles/lib_darktable.dir/common/printprof.c.o
+[ 41%] Linking C shared library libdarktable.so
+[ 41%] Built target lib_darktable
+[ 41%] Building C object bin/CMakeFiles/darktable.dir/main.c.o
+[ 41%] Linking C executable darktable
+[ 41%] Built target darktable
+[ 41%] Built target deploy
+[ 41%] Building C object bin/external/libxcf/CMakeFiles/xcf.dir/xcf.c.o
+[ 41%] Building C object bin/external/libxcf/CMakeFiles/xcf.dir/xcf_names.c.o
+[ 41%] Linking C static library libxcf.a
+[ 41%] Built target xcf
+[ 41%] Built target check-rawspeed
+[ 41%] Built target dependencies
+[ 41%] Built target tests
+[ 41%] Building CXX object lib/darktable/rawspeed/src/librawspeed/common/CMakeFiles/rawspeed_get_number_of_processor_cores.dir/GetNumberOfProcessorCores.cpp.o
+[ 41%] Linking CXX static library librawspeed_get_number_of_processor_cores.a
+[ 41%] Built target rawspeed_get_number_of_processor_cores
+[ 41%] Building CXX object lib/darktable/rawspeed/src/utilities/identify/CMakeFiles/darktable-rs-identify.dir/rawspeed-identify.cpp.o
+[ 41%] Linking CXX executable darktable-rs-identify
+[ 41%] Built target darktable-rs-identify
+[ 41%] Building C object lib/darktable/views/CMakeFiles/darkroom.dir/darkroom.c.o
+[ 41%] Linking C shared module libdarkroom.so
+[ 41%] Built target darkroom
+[ 41%] Building C object lib/darktable/views/CMakeFiles/lighttable.dir/lighttable.c.o
+[ 41%] Linking C shared module liblighttable.so
+[ 41%] Built target lighttable
+[ 41%] Building C object lib/darktable/views/CMakeFiles/slideshow.dir/slideshow.c.o
+[ 41%] Linking C shared module libslideshow.so
+[ 41%] Built target slideshow
+[ 42%] Building C object lib/darktable/views/CMakeFiles/knight.dir/knight.c.o
+[ 42%] Linking C shared module libknight.so
+[ 42%] Built target knight
+[ 42%] Building C object lib/darktable/views/CMakeFiles/map.dir/map.c.o
+[ 42%] Linking C shared module libmap.so
+[ 42%] Built target map
+[ 42%] Building C object lib/darktable/views/CMakeFiles/tethering.dir/tethering.c.o
+[ 42%] Linking C shared module libtethering.so
+[ 42%] Built target tethering
+[ 42%] Building C object lib/darktable/views/CMakeFiles/print.dir/print.c.o
+[ 42%] Linking C shared module libprint.so
+[ 42%] Built target print
+[ 42%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/import.dir/import.c.o
+[ 42%] Linking C shared module libimport.so
+[ 42%] Built target import
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/export.dir/export.c.o
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/export.dir/export_metadata.c.o
+[ 43%] Linking C shared module libexport.so
+[ 43%] Built target export
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/copy_history.dir/copy_history.c.o
+[ 43%] Linking C shared module libcopy_history.so
+[ 43%] Built target copy_history
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/styles.dir/styles.c.o
+[ 43%] Linking C shared module libstyles.so
+[ 43%] Built target styles
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/image.dir/image.c.o
+[ 43%] Linking C shared module libimage.so
+[ 43%] Built target image
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/tagging.dir/tagging.c.o
+[ 43%] Linking C shared module libtagging.so
+[ 43%] Built target tagging
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/select.dir/select.c.o
+[ 43%] Linking C shared module libselect.so
+[ 43%] Built target select
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/collect.dir/collect.c.o
+[ 43%] Linking C shared module libcollect.so
+[ 43%] Built target collect
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/recentcollect.dir/recentcollect.c.o
+[ 43%] Linking C shared module librecentcollect.so
+[ 43%] Built target recentcollect
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/filtering.dir/filtering.c.o
+[ 43%] Linking C shared module libfiltering.so
+[ 43%] Built target filtering
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/metadata.dir/metadata.c.o
+[ 43%] Linking C shared module libmetadata.so
+[ 43%] Built target metadata
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/metadata_view.dir/metadata_view.c.o
+[ 43%] Linking C shared module libmetadata_view.so
+[ 43%] Built target metadata_view
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/navigation.dir/navigation.c.o
+[ 43%] Linking C shared module libnavigation.so
+[ 43%] Built target navigation
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/histogram.dir/histogram.c.o
+[ 43%] Linking C shared module libhistogram.so
+[ 43%] Built target histogram
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/history.dir/history.c.o
+[ 43%] Linking C shared module libhistory.so
+[ 43%] Built target history
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/snapshots.dir/snapshots.c.o
+[ 43%] Linking C shared module libsnapshots.so
+[ 43%] Built target snapshots
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/modulegroups.dir/modulegroups.c.o
+[ 43%] Linking C shared module libmodulegroups.so
+[ 43%] Built target modulegroups
+[ 43%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/backgroundjobs.dir/backgroundjobs.c.o
+[ 44%] Linking C shared module libbackgroundjobs.so
+[ 44%] Built target backgroundjobs
+[ 44%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/colorpicker.dir/colorpicker.c.o
+[ 44%] Linking C shared module libcolorpicker.so
+[ 44%] Built target colorpicker
+[ 44%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/masks.dir/masks.c.o
+[ 44%] Linking C shared module libmasks.so
+[ 44%] Built target masks
+[ 44%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/session.dir/session.c.o
+[ 45%] Linking C shared module libsession.so
+[ 45%] Built target session
+[ 45%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/duplicate.dir/duplicate.c.o
+[ 45%] Linking C shared module libduplicate.so
+[ 45%] Built target duplicate
+[ 45%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/ioporder.dir/ioporder.c.o
+[ 45%] Linking C shared module libioporder.so
+[ 45%] Built target ioporder
+[ 45%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/viewswitcher.dir/tools/viewswitcher.c.o
+[ 45%] Linking C shared module libviewswitcher.so
+[ 45%] Built target viewswitcher
+[ 46%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/darktable_label.dir/tools/darktable.c.o
+[ 46%] Linking C shared module libdarktable_label.so
+[ 46%] Built target darktable_label
+[ 46%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/colorlabels.dir/tools/colorlabels.c.o
+[ 46%] Linking C shared module libcolorlabels.so
+[ 46%] Built target colorlabels
+[ 46%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/ratings.dir/tools/ratings.c.o
+[ 47%] Linking C shared module libratings.so
+[ 47%] Built target ratings
+[ 47%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/filter.dir/tools/filter.c.o
+[ 47%] Linking C shared module libfilter.so
+[ 47%] Built target filter
+[ 47%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/lighttable_mode.dir/tools/lighttable.c.o
+[ 48%] Linking C shared module liblighttable_mode.so
+[ 48%] Built target lighttable_mode
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/view_toolbox.dir/tools/view_toolbox.c.o
+[ 49%] Linking C shared module libview_toolbox.so
+[ 49%] Built target view_toolbox
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/module_toolbox.dir/tools/module_toolbox.c.o
+[ 49%] Linking C shared module libmodule_toolbox.so
+[ 49%] Built target module_toolbox
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/filmstrip.dir/tools/filmstrip.c.o
+[ 49%] Linking C shared module libfilmstrip.so
+[ 49%] Built target filmstrip
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/hinter.dir/tools/hinter.c.o
+[ 49%] Linking C shared module libhinter.so
+[ 49%] Built target hinter
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/global_toolbox.dir/tools/global_toolbox.c.o
+[ 49%] Linking C shared module libglobal_toolbox.so
+[ 49%] Built target global_toolbox
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/timeline.dir/tools/timeline.c.o
+[ 49%] Linking C shared module libtimeline.so
+[ 49%] Built target timeline
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/image_infos.dir/tools/image_infos.c.o
+[ 49%] Linking C shared module libimage_infos.so
+[ 49%] Built target image_infos
+[ 49%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/midi.dir/tools/midi.c.o
+[ 50%] Linking C shared module libmidi.so
+[ 50%] Built target midi
+[ 50%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/gamepad.dir/tools/gamepad.c.o
+[ 51%] Linking C shared module libgamepad.so
+[ 51%] Built target gamepad
+[ 51%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/camera.dir/camera.c.o
+[ 52%] Linking C shared module libcamera.so
+[ 52%] Built target camera
+[ 52%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/live_view.dir/live_view.c.o
+[ 52%] Linking C shared module liblive_view.so
+[ 52%] Built target live_view
+[ 52%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/location.dir/location.c.o
+[ 52%] Linking C shared module liblocation.so
+[ 52%] Built target location
+[ 52%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/map_settings.dir/map_settings.c.o
+[ 52%] Linking C shared module libmap_settings.so
+[ 52%] Built target map_settings
+[ 52%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/map_locations.dir/map_locations.c.o
+[ 52%] Linking C shared module libmap_locations.so
+[ 52%] Built target map_locations
+[ 52%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/geotagging.dir/geotagging.c.o
+[ 52%] Linking C shared module libgeotagging.so
+[ 52%] Built target geotagging
+[ 52%] Building C object lib/darktable/plugins/lighttable/CMakeFiles/print_settings.dir/print_settings.c.o
+[ 52%] Linking C shared module libprint_settings.so
+[ 52%] Built target print_settings
+[ 52%] Generating introspection_rawprepare.c
+[ 52%] Building C object lib/darktable/plugins/CMakeFiles/rawprepare.dir/introspection_rawprepare.c.o
+[ 52%] Linking C shared module librawprepare.so
+[ 52%] Built target rawprepare
+[ 52%] Generating introspection_soften.c
+[ 52%] Building C object lib/darktable/plugins/CMakeFiles/soften.dir/introspection_soften.c.o
+[ 52%] Linking C shared module libsoften.so
+[ 52%] Built target soften
+[ 52%] Generating introspection_bloom.c
+[ 52%] Building C object lib/darktable/plugins/CMakeFiles/bloom.dir/introspection_bloom.c.o
+[ 52%] Linking C shared module libbloom.so
+[ 52%] Built target bloom
+[ 53%] Generating introspection_highpass.c
+[ 53%] Building C object lib/darktable/plugins/CMakeFiles/highpass.dir/introspection_highpass.c.o
+[ 53%] Linking C shared module libhighpass.so
+[ 53%] Built target highpass
+[ 54%] Generating introspection_lowpass.c
+[ 54%] Building C object lib/darktable/plugins/CMakeFiles/lowpass.dir/introspection_lowpass.c.o
+[ 54%] Linking C shared module liblowpass.so
+[ 54%] Built target lowpass
+[ 54%] Generating introspection_shadhi.c
+[ 54%] Building C object lib/darktable/plugins/CMakeFiles/shadhi.dir/introspection_shadhi.c.o
+[ 54%] Linking C shared module libshadhi.so
+[ 54%] Built target shadhi
+[ 54%] Generating introspection_colorreconstruction.c
+[ 54%] Building C object lib/darktable/plugins/CMakeFiles/colorreconstruct.dir/introspection_colorreconstruction.c.o
+[ 54%] Linking C shared module libcolorreconstruct.so
+[ 54%] Built target colorreconstruct
+[ 54%] Generating introspection_tonemap.cc
+[ 54%] Building CXX object lib/darktable/plugins/CMakeFiles/tonemap.dir/introspection_tonemap.cc.o
+[ 54%] Linking CXX shared module libtonemap.so
+[ 54%] Built target tonemap
+[ 54%] Generating introspection_tonecurve.c
+[ 54%] Building C object lib/darktable/plugins/CMakeFiles/tonecurve.dir/introspection_tonecurve.c.o
+[ 55%] Linking C shared module libtonecurve.so
+[ 55%] Built target tonecurve
+[ 55%] Generating introspection_colisa.c
+[ 55%] Building C object lib/darktable/plugins/CMakeFiles/colisa.dir/introspection_colisa.c.o
+[ 56%] Linking C shared module libcolisa.so
+[ 56%] Built target colisa
+[ 56%] Generating introspection_gamma.c
+[ 56%] Building C object lib/darktable/plugins/CMakeFiles/gamma.dir/introspection_gamma.c.o
+[ 56%] Linking C shared module libgamma.so
+[ 56%] Built target gamma
+[ 56%] Generating introspection_temperature.c
+[ 56%] Building C object lib/darktable/plugins/CMakeFiles/temperature.dir/introspection_temperature.c.o
+[ 57%] Linking C shared module libtemperature.so
+[ 57%] Built target temperature
+[ 57%] Generating introspection_colorcorrection.c
+[ 57%] Building C object lib/darktable/plugins/CMakeFiles/colorcorrection.dir/introspection_colorcorrection.c.o
+[ 57%] Linking C shared module libcolorcorrection.so
+[ 57%] Built target colorcorrection
+[ 57%] Generating introspection_basicadj.c
+[ 57%] Building C object lib/darktable/plugins/CMakeFiles/basicadj.dir/introspection_basicadj.c.o
+[ 57%] Linking C shared module libbasicadj.so
+[ 57%] Built target basicadj
+[ 57%] Generating introspection_exposure.c
+[ 57%] Building C object lib/darktable/plugins/CMakeFiles/exposure.dir/introspection_exposure.c.o
+[ 57%] Linking C shared module libexposure.so
+[ 57%] Built target exposure
+[ 57%] Generating introspection_equalizer.c
+[ 57%] Building C object lib/darktable/plugins/CMakeFiles/equalizer.dir/introspection_equalizer.c.o
+[ 57%] Linking C shared module libequalizer.so
+[ 57%] Built target equalizer
+[ 57%] Generating introspection_rgbcurve.c
+[ 57%] Building C object lib/darktable/plugins/CMakeFiles/rgbcurve.dir/introspection_rgbcurve.c.o
+[ 57%] Linking C shared module librgbcurve.so
+[ 57%] Built target rgbcurve
+[ 57%] Generating introspection_colorbalance.c
+[ 57%] Building C object lib/darktable/plugins/CMakeFiles/colorbalance.dir/introspection_colorbalance.c.o
+[ 57%] Linking C shared module libcolorbalance.so
+[ 57%] Built target colorbalance
+[ 57%] Generating introspection_colorin.c
+[ 58%] Building C object lib/darktable/plugins/CMakeFiles/colorin.dir/introspection_colorin.c.o
+[ 58%] Linking C shared module libcolorin.so
+[ 58%] Built target colorin
+[ 59%] Generating introspection_colorout.c
+[ 59%] Building C object lib/darktable/plugins/CMakeFiles/colorout.dir/introspection_colorout.c.o
+[ 59%] Linking C shared module libcolorout.so
+[ 59%] Built target colorout
+[ 59%] Generating introspection_colorchecker.c
+[ 60%] Building C object lib/darktable/plugins/CMakeFiles/colorchecker.dir/introspection_colorchecker.c.o
+[ 60%] Linking C shared module libcolorchecker.so
+[ 60%] Built target colorchecker
+[ 60%] Generating introspection_clipping.c
+[ 60%] Building C object lib/darktable/plugins/CMakeFiles/clipping.dir/introspection_clipping.c.o
+[ 60%] Linking C shared module libclipping.so
+[ 60%] Built target clipping
+[ 61%] Generating introspection_crop.c
+[ 61%] Building C object lib/darktable/plugins/CMakeFiles/crop.dir/introspection_crop.c.o
+[ 61%] Linking C shared module libcrop.so
+[ 61%] Built target crop
+[ 61%] Generating introspection_sharpen.c
+[ 61%] Building C object lib/darktable/plugins/CMakeFiles/sharpen.dir/introspection_sharpen.c.o
+[ 61%] Linking C shared module libsharpen.so
+[ 61%] Built target sharpen
+[ 61%] Generating introspection_dither.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/dither.dir/introspection_dither.c.o
+[ 62%] Linking C shared module libdither.so
+[ 62%] Built target dither
+[ 62%] Generating introspection_monochrome.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/monochrome.dir/introspection_monochrome.c.o
+[ 62%] Linking C shared module libmonochrome.so
+[ 62%] Built target monochrome
+[ 62%] Generating introspection_basecurve.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/basecurve.dir/introspection_basecurve.c.o
+[ 62%] Linking C shared module libbasecurve.so
+[ 62%] Built target basecurve
+[ 62%] Generating introspection_colorzones.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/colorzones.dir/introspection_colorzones.c.o
+[ 62%] Linking C shared module libcolorzones.so
+[ 62%] Built target colorzones
+[ 62%] Generating introspection_highlights.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/highlights.dir/introspection_highlights.c.o
+[ 62%] Linking C shared module libhighlights.so
+[ 62%] Built target highlights
+[ 62%] Generating introspection_rawoverexposed.c
+no introspection requested for rawoverexposed.c.
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/rawoverexposed.dir/introspection_rawoverexposed.c.o
+[ 62%] Linking C shared module librawoverexposed.so
+[ 62%] Built target rawoverexposed
+[ 62%] Generating introspection_velvia.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/velvia.dir/introspection_velvia.c.o
+[ 62%] Linking C shared module libvelvia.so
+[ 62%] Built target velvia
+[ 62%] Generating introspection_vignette.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/vignette.dir/introspection_vignette.c.o
+[ 62%] Linking C shared module libvignette.so
+[ 62%] Built target vignette
+[ 62%] Generating introspection_splittoning.c
+[ 62%] Building C object lib/darktable/plugins/CMakeFiles/splittoning.dir/introspection_splittoning.c.o
+[ 63%] Linking C shared module libsplittoning.so
+[ 63%] Built target splittoning
+[ 63%] Generating introspection_grain.c
+[ 63%] Building C object lib/darktable/plugins/CMakeFiles/grain.dir/introspection_grain.c.o
+[ 63%] Linking C shared module libgrain.so
+[ 63%] Built target grain
+[ 63%] Generating introspection_clahe.c
+no introspection requested for clahe.c.
+[ 63%] Building C object lib/darktable/plugins/CMakeFiles/clahe.dir/introspection_clahe.c.o
+[ 63%] Linking C shared module libclahe.so
+[ 63%] Built target clahe
+[ 64%] Generating introspection_bilateral.cc
+[ 64%] Building CXX object lib/darktable/plugins/CMakeFiles/bilateral.dir/introspection_bilateral.cc.o
+[ 64%] Linking CXX shared module libbilateral.so
+[ 64%] Built target bilateral
+[ 64%] Generating introspection_profile_gamma.c
+[ 64%] Building C object lib/darktable/plugins/CMakeFiles/profile_gamma.dir/introspection_profile_gamma.c.o
+[ 64%] Linking C shared module libprofile_gamma.so
+[ 64%] Built target profile_gamma
+[ 64%] Generating introspection_colortransfer.c
+[ 65%] Building C object lib/darktable/plugins/CMakeFiles/colortransfer.dir/introspection_colortransfer.c.o
+[ 65%] Linking C shared module libcolortransfer.so
+[ 65%] Built target colortransfer
+[ 65%] Generating introspection_colormapping.c
+[ 65%] Building C object lib/darktable/plugins/CMakeFiles/colormapping.dir/introspection_colormapping.c.o
+[ 65%] Linking C shared module libcolormapping.so
+[ 65%] Built target colormapping
+[ 65%] Generating introspection_channelmixer.c
+[ 65%] Building C object lib/darktable/plugins/CMakeFiles/channelmixer.dir/introspection_channelmixer.c.o
+[ 65%] Linking C shared module libchannelmixer.so
+[ 65%] Built target channelmixer
+[ 65%] Generating introspection_graduatednd.c
+[ 65%] Building C object lib/darktable/plugins/CMakeFiles/graduatednd.dir/introspection_graduatednd.c.o
+[ 66%] Linking C shared module libgraduatednd.so
+[ 66%] Built target graduatednd
+[ 66%] Generating introspection_relight.c
+[ 66%] Building C object lib/darktable/plugins/CMakeFiles/relight.dir/introspection_relight.c.o
+[ 66%] Linking C shared module librelight.so
+[ 66%] Built target relight
+[ 66%] Generating introspection_zonesystem.c
+[ 66%] Building C object lib/darktable/plugins/CMakeFiles/zonesystem.dir/introspection_zonesystem.c.o
+[ 67%] Linking C shared module libzonesystem.so
+[ 67%] Built target zonesystem
+[ 67%] Generating introspection_demosaic.c
+[ 67%] Building C object lib/darktable/plugins/CMakeFiles/demosaic.dir/introspection_demosaic.c.o
+[ 67%] Building CXX object lib/darktable/plugins/CMakeFiles/demosaic.dir/demosaicing/amaze.cc.o
+[ 68%] Linking CXX shared module libdemosaic.so
+[ 68%] Built target demosaic
+[ 68%] Generating introspection_rotatepixels.c
+[ 68%] Building C object lib/darktable/plugins/CMakeFiles/rotatepixels.dir/introspection_rotatepixels.c.o
+[ 69%] Linking C shared module librotatepixels.so
+[ 69%] Built target rotatepixels
+[ 69%] Generating introspection_scalepixels.c
+[ 69%] Building C object lib/darktable/plugins/CMakeFiles/scalepixels.dir/introspection_scalepixels.c.o
+[ 69%] Linking C shared module libscalepixels.so
+[ 69%] Built target scalepixels
+[ 69%] Generating introspection_atrous.c
+[ 69%] Building C object lib/darktable/plugins/CMakeFiles/atrous.dir/introspection_atrous.c.o
+[ 69%] Linking C shared module libatrous.so
+[ 69%] Built target atrous
+[ 69%] Generating introspection_cacorrect.c
+[ 69%] Building C object lib/darktable/plugins/CMakeFiles/cacorrect.dir/introspection_cacorrect.c.o
+[ 69%] Linking C shared module libcacorrect.so
+[ 69%] Built target cacorrect
+[ 69%] Generating introspection_overexposed.c
+no introspection requested for overexposed.c.
+[ 69%] Building C object lib/darktable/plugins/CMakeFiles/overexposed.dir/introspection_overexposed.c.o
+[ 69%] Linking C shared module liboverexposed.so
+[ 69%] Built target overexposed
+[ 70%] Generating introspection_hotpixels.c
+[ 70%] Building C object lib/darktable/plugins/CMakeFiles/hotpixels.dir/introspection_hotpixels.c.o
+[ 70%] Linking C shared module libhotpixels.so
+[ 70%] Built target hotpixels
+[ 70%] Generating introspection_lowlight.c
+[ 70%] Building C object lib/darktable/plugins/CMakeFiles/lowlight.dir/introspection_lowlight.c.o
+[ 70%] Linking C shared module liblowlight.so
+[ 70%] Built target lowlight
+[ 70%] Generating introspection_spots.c
+[ 70%] Building C object lib/darktable/plugins/CMakeFiles/spots.dir/introspection_spots.c.o
+[ 70%] Linking C shared module libspots.so
+[ 70%] Built target spots
+[ 70%] Generating introspection_retouch.c
+[ 70%] Building C object lib/darktable/plugins/CMakeFiles/retouch.dir/introspection_retouch.c.o
+[ 71%] Linking C shared module libretouch.so
+[ 71%] Built target retouch
+[ 71%] Generating introspection_liquify.c
+[ 71%] Building C object lib/darktable/plugins/CMakeFiles/liquify.dir/introspection_liquify.c.o
+[ 71%] Linking C shared module libliquify.so
+[ 71%] Built target liquify
+[ 72%] Generating introspection_rawdenoise.c
+[ 72%] Building C object lib/darktable/plugins/CMakeFiles/rawdenoise.dir/introspection_rawdenoise.c.o
+[ 72%] Linking C shared module librawdenoise.so
+[ 72%] Built target rawdenoise
+[ 73%] Generating introspection_borders.c
+[ 73%] Building C object lib/darktable/plugins/CMakeFiles/borders.dir/introspection_borders.c.o
+[ 73%] Linking C shared module libborders.so
+[ 73%] Built target borders
+[ 73%] Generating introspection_nlmeans.c
+[ 73%] Building C object lib/darktable/plugins/CMakeFiles/nlmeans.dir/introspection_nlmeans.c.o
+[ 73%] Linking C shared module libnlmeans.so
+[ 73%] Built target nlmeans
+[ 73%] Generating introspection_colorcontrast.c
+[ 73%] Building C object lib/darktable/plugins/CMakeFiles/colorcontrast.dir/introspection_colorcontrast.c.o
+[ 73%] Linking C shared module libcolorcontrast.so
+[ 73%] Built target colorcontrast
+[ 74%] Generating introspection_levels.c
+[ 74%] Building C object lib/darktable/plugins/CMakeFiles/levels.dir/introspection_levels.c.o
+[ 74%] Linking C shared module liblevels.so
+[ 74%] Built target levels
+[ 74%] Generating introspection_rgblevels.c
+[ 74%] Building C object lib/darktable/plugins/CMakeFiles/rgblevels.dir/introspection_rgblevels.c.o
+[ 74%] Linking C shared module librgblevels.so
+[ 74%] Built target rgblevels
+[ 74%] Generating introspection_colorize.c
+[ 74%] Building C object lib/darktable/plugins/CMakeFiles/colorize.dir/introspection_colorize.c.o
+[ 74%] Linking C shared module libcolorize.so
+[ 74%] Built target colorize
+[ 74%] Generating introspection_invert.c
+[ 75%] Building C object lib/darktable/plugins/CMakeFiles/invert.dir/introspection_invert.c.o
+[ 75%] Linking C shared module libinvert.so
+[ 75%] Built target invert
+[ 75%] Generating introspection_vibrance.c
+[ 75%] Building C object lib/darktable/plugins/CMakeFiles/vibrance.dir/introspection_vibrance.c.o
+[ 75%] Linking C shared module libvibrance.so
+[ 75%] Built target vibrance
+[ 75%] Generating introspection_flip.c
+[ 75%] Building C object lib/darktable/plugins/CMakeFiles/flip.dir/introspection_flip.c.o
+[ 75%] Linking C shared module libflip.so
+[ 75%] Built target flip
+[ 76%] Generating introspection_finalscale.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/finalscale.dir/introspection_finalscale.c.o
+[ 76%] Linking C shared module libfinalscale.so
+[ 76%] Built target finalscale
+[ 76%] Generating introspection_globaltonemap.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/globaltonemap.dir/introspection_globaltonemap.c.o
+[ 76%] Linking C shared module libglobaltonemap.so
+[ 76%] Built target globaltonemap
+[ 76%] Generating introspection_bilat.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/bilat.dir/introspection_bilat.c.o
+[ 76%] Linking C shared module libbilat.so
+[ 76%] Built target bilat
+[ 76%] Generating introspection_denoiseprofile.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/denoiseprofile.dir/introspection_denoiseprofile.c.o
+[ 76%] Linking C shared module libdenoiseprofile.so
+[ 76%] Built target denoiseprofile
+[ 76%] Generating introspection_defringe.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/defringe.dir/introspection_defringe.c.o
+[ 76%] Linking C shared module libdefringe.so
+[ 76%] Built target defringe
+[ 76%] Generating introspection_ashift.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/ashift.dir/introspection_ashift.c.o
+[ 76%] Linking C shared module libashift.so
+[ 76%] Built target ashift
+[ 76%] Generating introspection_hazeremoval.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/hazeremoval.dir/introspection_hazeremoval.c.o
+[ 76%] Linking C shared module libhazeremoval.so
+[ 76%] Built target hazeremoval
+[ 76%] Generating introspection_filmic.c
+[ 76%] Building C object lib/darktable/plugins/CMakeFiles/filmic.dir/introspection_filmic.c.o
+[ 77%] Linking C shared module libfilmic.so
+[ 77%] Built target filmic
+[ 77%] Generating introspection_mask_manager.c
+[ 78%] Building C object lib/darktable/plugins/CMakeFiles/mask_manager.dir/introspection_mask_manager.c.o
+[ 78%] Linking C shared module libmask_manager.so
+[ 78%] Built target mask_manager
+[ 78%] Generating introspection_lut3d.c
+[ 78%] Building C object lib/darktable/plugins/CMakeFiles/lut3d.dir/introspection_lut3d.c.o
+[ 78%] Building CXX object lib/darktable/plugins/CMakeFiles/lut3d.dir/lut3dgmic.cpp.o
+[ 78%] Linking CXX shared module liblut3d.so
+[ 78%] Built target lut3d
+[ 78%] Generating introspection_toneequal.c
+[ 78%] Building C object lib/darktable/plugins/CMakeFiles/toneequal.dir/introspection_toneequal.c.o
+[ 78%] Linking C shared module libtoneequal.so
+[ 78%] Built target toneequal
+[ 78%] Generating introspection_filmicrgb.c
+[ 78%] Building C object lib/darktable/plugins/CMakeFiles/filmicrgb.dir/introspection_filmicrgb.c.o
+[ 78%] Linking C shared module libfilmicrgb.so
+[ 78%] Built target filmicrgb
+[ 79%] Generating introspection_negadoctor.c
+[ 79%] Building C object lib/darktable/plugins/CMakeFiles/negadoctor.dir/introspection_negadoctor.c.o
+[ 79%] Linking C shared module libnegadoctor.so
+[ 79%] Built target negadoctor
+[ 79%] Generating introspection_channelmixerrgb.c
+[ 79%] Building C object lib/darktable/plugins/CMakeFiles/channelmixerrgb.dir/introspection_channelmixerrgb.c.o
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/channelmixerrgb.dir/__/chart/common.c.o
+[ 80%] Linking C shared module libchannelmixerrgb.so
+[ 80%] Built target channelmixerrgb
+[ 80%] Generating introspection_censorize.c
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/censorize.dir/introspection_censorize.c.o
+[ 80%] Linking C shared module libcensorize.so
+[ 80%] Built target censorize
+[ 80%] Generating introspection_colorbalancergb.c
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/colorbalancergb.dir/introspection_colorbalancergb.c.o
+[ 80%] Linking C shared module libcolorbalancergb.so
+[ 80%] Built target colorbalancergb
+[ 80%] Generating introspection_cacorrectrgb.c
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/cacorrectrgb.dir/introspection_cacorrectrgb.c.o
+[ 80%] Linking C shared module libcacorrectrgb.so
+[ 80%] Built target cacorrectrgb
+[ 80%] Generating introspection_diffuse.c
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/diffuse.dir/introspection_diffuse.c.o
+[ 80%] Linking C shared module libdiffuse.so
+[ 80%] Built target diffuse
+[ 80%] Generating introspection_blurs.c
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/blurs.dir/introspection_blurs.c.o
+[ 80%] Linking C shared module libblurs.so
+[ 80%] Built target blurs
+[ 80%] Generating introspection_sigmoid.c
+[ 80%] Building C object lib/darktable/plugins/CMakeFiles/sigmoid.dir/introspection_sigmoid.c.o
+[ 81%] Linking C shared module libsigmoid.so
+[ 81%] Built target sigmoid
+[ 81%] Generating introspection_primaries.c
+[ 82%] Building C object lib/darktable/plugins/CMakeFiles/primaries.dir/introspection_primaries.c.o
+[ 82%] Linking C shared module libprimaries.so
+[ 82%] Built target primaries
+[ 82%] Generating introspection_watermark.c
+[ 82%] Building C object lib/darktable/plugins/CMakeFiles/watermark.dir/introspection_watermark.c.o
+[ 82%] Linking C shared module libwatermark.so
+[ 82%] Built target watermark
+[ 82%] Generating introspection_lens.cc
+[ 82%] Building CXX object lib/darktable/plugins/CMakeFiles/lens.dir/introspection_lens.cc.o
+[ 82%] Linking CXX shared module liblens.so
+[ 82%] Built target lens
+[ 82%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/copy.dir/copy.c.o
+[ 82%] Linking C shared module libcopy.so
+[ 82%] Built target copy
+[ 82%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/jpeg.dir/jpeg.c.o
+[ 82%] Linking C shared module libjpeg.so
+[ 82%] Built target jpeg
+[ 82%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/pdf.dir/pdf.c.o
+[ 82%] Linking C shared module libpdf.so
+[ 82%] Built target pdf
+[ 82%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/png.dir/png.c.o
+[ 82%] Linking C shared module libpng.so
+[ 82%] Built target png
+[ 82%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/ppm.dir/ppm.c.o
+[ 82%] Linking C shared module libppm.so
+[ 82%] Built target ppm
+[ 83%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/pfm.dir/pfm.c.o
+[ 83%] Linking C shared module libpfm.so
+[ 83%] Built target pfm
+[ 83%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/tiff.dir/tiff.c.o
+[ 83%] Linking C shared module libtiff.so
+[ 83%] Built target tiff
+[ 83%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/jxl_format.dir/jxl.c.o
+[ 83%] Linking C shared module libjpegxl.so
+[ 83%] Built target jxl_format
+[ 84%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/webp.dir/webp.c.o
+[ 84%] Linking C shared module libwebp.so
+[ 84%] Built target webp
+[ 84%] Building CXX object lib/darktable/plugins/imageio/format/CMakeFiles/exr.dir/exr.cc.o
+[ 84%] Linking CXX shared module libexr.so
+[ 84%] Built target exr
+[ 84%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/j2k.dir/j2k.c.o
+[ 84%] Linking C shared module libj2k.so
+[ 84%] Built target j2k
+[ 84%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/avif_format.dir/avif.c.o
+[ 84%] Linking C shared module libavif.so
+[ 84%] Built target avif_format
+[ 85%] Building C object lib/darktable/plugins/imageio/format/CMakeFiles/gimp_xcf.dir/xcf.c.o
+[ 85%] Linking C shared module libxcf.so
+[ 85%] Built target gimp_xcf
+[ 85%] Building C object lib/darktable/plugins/imageio/storage/CMakeFiles/disk.dir/disk.c.o
+[ 85%] Linking C shared module libdisk.so
+[ 85%] Built target disk
+[ 85%] Building C object lib/darktable/plugins/imageio/storage/CMakeFiles/email.dir/email.c.o
+[ 85%] Linking C shared module libemail.so
+[ 85%] Built target email
+[ 85%] Building C object lib/darktable/plugins/imageio/storage/CMakeFiles/gallery.dir/gallery.c.o
+[ 85%] Linking C shared module libgallery.so
+[ 85%] Built target gallery
+[ 85%] Building C object lib/darktable/plugins/imageio/storage/CMakeFiles/latex.dir/latex.c.o
+[ 85%] Linking C shared module liblatex.so
+[ 85%] Built target latex
+[ 85%] Building C object lib/darktable/plugins/imageio/storage/CMakeFiles/piwigo.dir/piwigo.c.o
+[ 85%] Linking C shared module libpiwigo.so
+[ 85%] Built target piwigo
+[ 85%] Building C object bin/cltest/CMakeFiles/darktable-cltest.dir/main.c.o
+[ 86%] Linking C executable ../darktable-cltest
+[ 86%] Built target darktable-cltest
+[ 86%] Building C object bin/cli/CMakeFiles/darktable-cli.dir/main.c.o
+[ 86%] Linking C executable ../darktable-cli
+[ 86%] Built target darktable-cli
+[ 86%] Building C object bin/generate-cache/CMakeFiles/darktable-generate-cache.dir/main.c.o
+[ 86%] Linking C executable ../darktable-generate-cache
+[ 86%] Built target darktable-generate-cache
+[ 86%] Building C object bin/cmstest/CMakeFiles/darktable-cmstest.dir/main.c.o
+[ 86%] Building C object bin/cmstest/CMakeFiles/darktable-cmstest.dir/__/version_gen.c.o
+[ 86%] Linking C executable ../darktable-cmstest
+[ 86%] Built target darktable-cmstest
+[ 86%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/main.c.o
+[ 86%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/colorchart.c.o
+[ 87%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/deltaE.c.o
+[ 87%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/pfm.c.o
+[ 87%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/dtcairo.c.o
+[ 87%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/common.c.o
+[ 87%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/thinplate.c.o
+[ 87%] Building C object bin/chart/CMakeFiles/darktable-chart.dir/tonecurve.c.o
+[ 87%] Linking C executable darktable-chart
+[ 87%] Built target darktable-chart
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/canon_600.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/crx.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/decoders_dcraw.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/decoders_libraw.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/decoders_libraw_dcrdefs.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/dng.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/fp_dng.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/fuji_compressed.cpp.o
+[ 88%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/generic.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/kodak_decoders.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/load_mfbacks.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/smal.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/unpack.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/decoders/unpack_thumb.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/demosaic/aahd_demosaic.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/demosaic/ahd_demosaic.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/demosaic/dcb_demosaic.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/demosaic/dht_demosaic.cpp.o
+[ 89%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/demosaic/misc_demosaic.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/demosaic/xtrans_demosaic.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/integration/dngsdk_glue.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/integration/rawspeed_glue.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/libraw_c_api.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/libraw_datastream.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/adobepano.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/canon.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/ciff.cpp.o
+[ 90%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/cr3_parser.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/epson.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/exif_gps.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/fuji.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/hasselblad_model.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/identify.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/identify_tools.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/kodak.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/leica.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/makernotes.cpp.o
+[ 91%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/mediumformat.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/minolta.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/misc_parsers.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/nikon.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/normalize_model.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/olympus.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/p1.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/pentax.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/samsung.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/sony.cpp.o
+[ 92%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/metadata/tiff.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/postprocessing/aspect_ratio.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/postprocessing/dcraw_process.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/postprocessing/mem_image.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/postprocessing/postprocessing_aux.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/postprocessing/postprocessing_utils.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/postprocessing/postprocessing_utils_dcrdefs.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/preprocessing/ext_preprocess.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/preprocessing/raw2image.cpp.o
+[ 93%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/preprocessing/subtract_black.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/tables/cameralist.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/tables/colorconst.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/tables/colordata.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/tables/wblists.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/curves.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/decoder_info.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/init_close_utils.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/open.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/phaseone_processing.cpp.o
+[ 94%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/read_utils.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/thumb_utils.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/utils_dcraw.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/utils/utils_libraw.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/write/apply_profile.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/write/file_write.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/write/tiff_writer.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/x3f/x3f_parse_process.cpp.o
+[ 95%] Building CXX object bin/external/LibRaw-cmake/CMakeFiles/raw_r.dir/__/LibRaw/src/x3f/x3f_utils_patched.cpp.o
+[ 95%] Linking CXX static library libraw_r.a
+[ 95%] Built target raw_r
+[ 95%] Generating org.darktable.darktable.desktop
+Merging translations into /home/ubuntu/git/darktable/build/share/darktable/org.darktable.darktable.desktop.
+[ 95%] Checking validity of org.darktable.darktable.desktop
+[ 95%] Built target validate_darktable_desktop
+[ 95%] Built target darktable.desktop_file
+[ 95%] Generating ../metainfo/org.darktable.darktable.appdata.xml
+Merging translations into /home/ubuntu/git/darktable/build/bin/../share/metainfo/org.darktable.darktable.appdata.xml.
+CREATED /home/ubuntu/git/darktable/build/bin/../share/metainfo/org.darktable.darktable.appdata.xml
+[ 95%] Built target darktable.appdata_file
+[ 95%] Checking validity of noiseprofiles.json
+[ 95%] Built target validate_noiseprofiles_json
+[ 95%] Checking validity of wb_presets.json
+[ 95%] Built target validate_wbpresets_json
+[ 95%] Generating darktablerc
+[ 95%] Built target darktablerc_file
+[ 95%] Test-compiling OpenCL program soften.cl
+[ 95%] Built target opencl-program-soften.cl
+[ 95%] Test-compiling OpenCL program atrous.cl
+[ 95%] Built target opencl-program-atrous.cl
+[ 95%] Test-compiling OpenCL program basecurve.cl
+[ 95%] Built target opencl-program-basecurve.cl
+[ 95%] Test-compiling OpenCL program basic.cl
+[ 95%] Built target opencl-program-basic.cl
+[ 95%] Test-compiling OpenCL program basicadj.cl
+[ 95%] Built target opencl-program-basicadj.cl
+[ 96%] Test-compiling OpenCL program bilateral.cl
+[ 96%] Built target opencl-program-bilateral.cl
+[ 96%] Test-compiling OpenCL program blendop.cl
+[ 96%] Built target opencl-program-blendop.cl
+[ 96%] Test-compiling OpenCL program bloom.cl
+[ 96%] Built target opencl-program-bloom.cl
+[ 96%] Test-compiling OpenCL program blurs.cl
+[ 96%] Built target opencl-program-blurs.cl
+[ 96%] Test-compiling OpenCL program bspline.cl
+[ 96%] Built target opencl-program-bspline.cl
+[ 96%] Test-compiling OpenCL program channelmixer.cl
+[ 96%] Built target opencl-program-channelmixer.cl
+[ 96%] Test-compiling OpenCL program colorreconstruction.cl
+[ 96%] Built target opencl-program-colorreconstruction.cl
+[ 96%] Test-compiling OpenCL program colorspaces.cl
+[ 96%] Built target opencl-program-colorspaces.cl
+[ 96%] Test-compiling OpenCL program demosaic_markesteijn.cl
+[ 96%] Built target opencl-program-demosaic_markesteijn.cl
+[ 97%] Test-compiling OpenCL program demosaic_other.cl
+[ 97%] Built target opencl-program-demosaic_other.cl
+[ 97%] Test-compiling OpenCL program demosaic_ppg.cl
+[ 97%] Built target opencl-program-demosaic_ppg.cl
+[ 97%] Test-compiling OpenCL program demosaic_rcd.cl
+[ 97%] Built target opencl-program-demosaic_rcd.cl
+[ 97%] Test-compiling OpenCL program demosaic_vng.cl
+[ 97%] Built target opencl-program-demosaic_vng.cl
+[ 97%] Test-compiling OpenCL program denoiseprofile.cl
+[ 97%] Built target opencl-program-denoiseprofile.cl
+[ 97%] Test-compiling OpenCL program diffuse.cl
+[ 97%] Built target opencl-program-diffuse.cl
+[ 97%] Test-compiling OpenCL program dwt.cl
+[ 97%] Built target opencl-program-dwt.cl
+[ 97%] Test-compiling OpenCL program extended.cl
+[ 97%] Built target opencl-program-extended.cl
+[ 97%] Test-compiling OpenCL program filmic.cl
+[ 97%] Built target opencl-program-filmic.cl
+[ 97%] Test-compiling OpenCL program gaussian.cl
+[ 97%] Built target opencl-program-gaussian.cl
+[ 98%] Test-compiling OpenCL program guided_filter.cl
+[ 98%] Built target opencl-program-guided_filter.cl
+[ 98%] Test-compiling OpenCL program hazeremoval.cl
+[ 98%] Built target opencl-program-hazeremoval.cl
+[ 98%] Test-compiling OpenCL program highpass.cl
+[ 98%] Built target opencl-program-highpass.cl
+[ 98%] Test-compiling OpenCL program liquify.cl
+[ 98%] Built target opencl-program-liquify.cl
+[ 98%] Test-compiling OpenCL program locallaplacian.cl
+[ 98%] Built target opencl-program-locallaplacian.cl
+[ 98%] Test-compiling OpenCL program lut3d.cl
+[ 98%] Built target opencl-program-lut3d.cl
+[ 98%] Test-compiling OpenCL program negadoctor.cl
+[ 98%] Built target opencl-program-negadoctor.cl
+[ 98%] Test-compiling OpenCL program nlmeans.cl
+[ 98%] Built target opencl-program-nlmeans.cl
+[ 98%] Test-compiling OpenCL program retouch.cl
+[ 98%] Built target opencl-program-retouch.cl
+[ 99%] Test-compiling OpenCL program rgbcurve.cl
+[ 99%] Built target opencl-program-rgbcurve.cl
+[ 99%] Test-compiling OpenCL program rgblevels.cl
+[ 99%] Built target opencl-program-rgblevels.cl
+[ 99%] Test-compiling OpenCL program sharpen.cl
+[ 99%] Built target opencl-program-sharpen.cl
+[ 99%] Test-compiling OpenCL program sigmoid.cl
+[ 99%] Built target opencl-program-sigmoid.cl
+[ 99%] Built target testcompile_opencl_kernels
+[100%] Generating darktable-cmstest.1
+[100%] Built target manpage_darktable-cmstest.1
+[100%] Generating darktable.1
+[100%] Built target manpage_darktable.1
+[100%] Generating darktable-cli.1
+[100%] Built target manpage_darktable-cli.1
+[100%] Generating darktable-generate-cache.1
+[100%] Built target manpage_darktable-generate-cache.1
+[100%] Generating darktable-cltest.1
+[100%] Built target manpage_darktable-cltest.1
+[100%] Built target manpages
+darktable finished building.
+To actually install darktable you need to type:
+$ cmake --build "/home/ubuntu/git/darktable/build" --target install -- -j1
+[  0%] Updating version string (git checkout)
+Version string: 4.6.0
+[  0%] Built target create_version_gen
+[  0%] Built target generate_version
+[  0%] Built target locale_zh_TW
+[  0%] Built target locale_cs
+[  0%] Built target locale_de
+[  0%] Built target locale_en-truecase
+[  1%] Built target locale_es
+[  1%] Built target locale_fi
+[  1%] Built target locale_fr
+[  1%] Built target locale_hu
+[  1%] Built target locale_it
+[  1%] Built target locale_ja
+[  1%] Built target locale_nl
+[  1%] Built target locale_pl
+[  1%] Built target locale_pt_BR
+[  1%] Built target locale_ru
+[  2%] Built target locale_sl
+[  2%] Built target locale_sq
+[  2%] Built target locale_uk
+[  2%] Built target locale_zh_CN
+[  2%] Built target locales
+[  3%] Checking validity of /home/ubuntu/git/darktable/build/share/darktable/darktableconfig.xml
+[  3%] Built target validate_darktableconfig_xml
+[  3%] Built target generate_conf
+[  3%] Built target generate_preferences
+[ 10%] Built target raw
+[ 10%] Built target validate-cameras.xml
+[ 20%] Built target rawspeed
+[ 20%] Built target lib_darktable_imageio_rawspeed
+[ 20%] Built target generate_authors_h
+[ 20%] Built target whereami
+[ 20%] Built target lautoc
+[ 41%] Built target lib_darktable
+[ 41%] Built target darktable
+[ 41%] Built target deploy
+[ 41%] Built target xcf
+[ 41%] Built target check-rawspeed
+[ 41%] Built target dependencies
+[ 41%] Built target tests
+[ 41%] Built target rawspeed_get_number_of_processor_cores
+[ 41%] Built target darktable-rs-identify
+[ 41%] Built target darkroom
+[ 41%] Built target lighttable
+[ 41%] Built target slideshow
+[ 42%] Built target knight
+[ 42%] Built target map
+[ 42%] Built target tethering
+[ 42%] Built target print
+[ 42%] Built target import
+[ 43%] Built target export
+[ 43%] Built target copy_history
+[ 43%] Built target styles
+[ 43%] Built target image
+[ 43%] Built target tagging
+[ 43%] Built target select
+[ 43%] Built target collect
+[ 43%] Built target recentcollect
+[ 43%] Built target filtering
+[ 43%] Built target metadata
+[ 43%] Built target metadata_view
+[ 43%] Built target navigation
+[ 43%] Built target histogram
+[ 43%] Built target history
+[ 43%] Built target snapshots
+[ 43%] Built target modulegroups
+[ 44%] Built target backgroundjobs
+[ 44%] Built target colorpicker
+[ 44%] Built target masks
+[ 45%] Built target session
+[ 45%] Built target duplicate
+[ 45%] Built target ioporder
+[ 45%] Built target viewswitcher
+[ 46%] Built target darktable_label
+[ 46%] Built target colorlabels
+[ 47%] Built target ratings
+[ 47%] Built target filter
+[ 48%] Built target lighttable_mode
+[ 49%] Built target view_toolbox
+[ 49%] Built target module_toolbox
+[ 49%] Built target filmstrip
+[ 49%] Built target hinter
+[ 49%] Built target global_toolbox
+[ 49%] Built target timeline
+[ 49%] Built target image_infos
+[ 50%] Built target midi
+[ 51%] Built target gamepad
+[ 52%] Built target camera
+[ 52%] Built target live_view
+[ 52%] Built target location
+[ 52%] Built target map_settings
+[ 52%] Built target map_locations
+[ 52%] Built target geotagging
+[ 52%] Built target print_settings
+[ 52%] Built target rawprepare
+[ 52%] Built target soften
+[ 52%] Built target bloom
+[ 53%] Built target highpass
+[ 54%] Built target lowpass
+[ 54%] Built target shadhi
+[ 54%] Built target colorreconstruct
+[ 54%] Built target tonemap
+[ 55%] Built target tonecurve
+[ 56%] Built target colisa
+[ 56%] Built target gamma
+[ 57%] Built target temperature
+[ 57%] Built target colorcorrection
+[ 57%] Built target basicadj
+[ 57%] Built target exposure
+[ 57%] Built target equalizer
+[ 57%] Built target rgbcurve
+[ 57%] Built target colorbalance
+[ 58%] Built target colorin
+[ 59%] Built target colorout
+[ 60%] Built target colorchecker
+[ 60%] Built target clipping
+[ 61%] Built target crop
+[ 61%] Built target sharpen
+[ 62%] Built target dither
+[ 62%] Built target monochrome
+[ 62%] Built target basecurve
+[ 62%] Built target colorzones
+[ 62%] Built target highlights
+[ 62%] Built target rawoverexposed
+[ 62%] Built target velvia
+[ 62%] Built target vignette
+[ 63%] Built target splittoning
+[ 63%] Built target grain
+[ 63%] Built target clahe
+[ 64%] Built target bilateral
+[ 64%] Built target profile_gamma
+[ 65%] Built target colortransfer
+[ 65%] Built target colormapping
+[ 65%] Built target channelmixer
+[ 66%] Built target graduatednd
+[ 66%] Built target relight
+[ 67%] Built target zonesystem
+[ 68%] Built target demosaic
+[ 69%] Built target rotatepixels
+[ 69%] Built target scalepixels
+[ 69%] Built target atrous
+[ 69%] Built target cacorrect
+[ 69%] Built target overexposed
+[ 70%] Built target hotpixels
+[ 70%] Built target lowlight
+[ 70%] Built target spots
+[ 71%] Built target retouch
+[ 71%] Built target liquify
+[ 72%] Built target rawdenoise
+[ 73%] Built target borders
+[ 73%] Built target nlmeans
+[ 73%] Built target colorcontrast
+[ 74%] Built target levels
+[ 74%] Built target rgblevels
+[ 74%] Built target colorize
+[ 75%] Built target invert
+[ 75%] Built target vibrance
+[ 75%] Built target flip
+[ 76%] Built target finalscale
+[ 76%] Built target globaltonemap
+[ 76%] Built target bilat
+[ 76%] Built target denoiseprofile
+[ 76%] Built target defringe
+[ 76%] Built target ashift
+[ 76%] Built target hazeremoval
+[ 77%] Built target filmic
+[ 78%] Built target mask_manager
+[ 78%] Built target lut3d
+[ 78%] Built target toneequal
+[ 78%] Built target filmicrgb
+[ 79%] Built target negadoctor
+[ 80%] Built target channelmixerrgb
+[ 80%] Built target censorize
+[ 80%] Built target colorbalancergb
+[ 80%] Built target cacorrectrgb
+[ 80%] Built target diffuse
+[ 80%] Built target blurs
+[ 81%] Built target sigmoid
+[ 82%] Built target primaries
+[ 82%] Built target watermark
+[ 82%] Built target lens
+[ 82%] Built target copy
+[ 82%] Built target jpeg
+[ 82%] Built target pdf
+[ 82%] Built target png
+[ 82%] Built target ppm
+[ 83%] Built target pfm
+[ 83%] Built target tiff
+[ 83%] Built target jxl_format
+[ 84%] Built target webp
+[ 84%] Built target exr
+[ 84%] Built target j2k
+[ 84%] Built target avif_format
+[ 85%] Built target gimp_xcf
+[ 85%] Built target disk
+[ 85%] Built target email
+[ 85%] Built target gallery
+[ 85%] Built target latex
+[ 85%] Built target piwigo
+[ 86%] Built target darktable-cltest
+[ 86%] Built target darktable-cli
+[ 86%] Built target darktable-generate-cache
+[ 86%] Built target darktable-cmstest
+[ 87%] Built target darktable-chart
+[ 95%] Built target raw_r
+[ 95%] Checking validity of org.darktable.darktable.desktop
+[ 95%] Built target validate_darktable_desktop
+[ 95%] Built target darktable.desktop_file
+[ 95%] Built target darktable.appdata_file
+[ 95%] Checking validity of noiseprofiles.json
+[ 95%] Built target validate_noiseprofiles_json
+[ 95%] Checking validity of wb_presets.json
+[ 95%] Built target validate_wbpresets_json
+[ 95%] Built target darktablerc_file
+[ 95%] Built target opencl-program-soften.cl
+[ 95%] Built target opencl-program-atrous.cl
+[ 95%] Built target opencl-program-basecurve.cl
+[ 95%] Built target opencl-program-basic.cl
+[ 95%] Built target opencl-program-basicadj.cl
+[ 96%] Built target opencl-program-bilateral.cl
+[ 96%] Built target opencl-program-blendop.cl
+[ 96%] Built target opencl-program-bloom.cl
+[ 96%] Built target opencl-program-blurs.cl
+[ 96%] Built target opencl-program-bspline.cl
+[ 96%] Built target opencl-program-channelmixer.cl
+[ 96%] Built target opencl-program-colorreconstruction.cl
+[ 96%] Built target opencl-program-colorspaces.cl
+[ 96%] Built target opencl-program-demosaic_markesteijn.cl
+[ 97%] Built target opencl-program-demosaic_other.cl
+[ 97%] Built target opencl-program-demosaic_ppg.cl
+[ 97%] Built target opencl-program-demosaic_rcd.cl
+[ 97%] Built target opencl-program-demosaic_vng.cl
+[ 97%] Built target opencl-program-denoiseprofile.cl
+[ 97%] Built target opencl-program-diffuse.cl
+[ 97%] Built target opencl-program-dwt.cl
+[ 97%] Built target opencl-program-extended.cl
+[ 97%] Built target opencl-program-filmic.cl
+[ 97%] Built target opencl-program-gaussian.cl
+[ 98%] Built target opencl-program-guided_filter.cl
+[ 98%] Built target opencl-program-hazeremoval.cl
+[ 98%] Built target opencl-program-highpass.cl
+[ 98%] Built target opencl-program-liquify.cl
+[ 98%] Built target opencl-program-locallaplacian.cl
+[ 98%] Built target opencl-program-lut3d.cl
+[ 98%] Built target opencl-program-negadoctor.cl
+[ 98%] Built target opencl-program-nlmeans.cl
+[ 98%] Built target opencl-program-retouch.cl
+[ 99%] Built target opencl-program-rgbcurve.cl
+[ 99%] Built target opencl-program-rgblevels.cl
+[ 99%] Built target opencl-program-sharpen.cl
+[ 99%] Built target opencl-program-sigmoid.cl
+[ 99%] Built target testcompile_opencl_kernels
+[100%] Built target manpage_darktable-cmstest.1
+[100%] Built target manpage_darktable.1
+[100%] Built target manpage_darktable-cli.1
+[100%] Built target manpage_darktable-generate-cache.1
+[100%] Built target manpage_darktable-cltest.1
+[100%] Built target manpages
+Install the project...
+-- Install configuration: "RelWithDebInfo"
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/cs/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/de/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/en@truecase/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/es/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/fi/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/fr/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/hu/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/it/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/ja/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/nl/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/pl/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/pt_BR/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/ru/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/sl/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/sq/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/uk/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/zh_CN/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/locale/zh_TW/LC_MESSAGES/darktable.mo
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable-rs-identify
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/rawspeed/cameras.xml
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/rawspeed/showcameras.xsl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/libdarktable.so
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libdarkroom.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libdarkroom.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/liblighttable.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/liblighttable.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libslideshow.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libslideshow.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libknight.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libknight.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libmap.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libmap.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libtethering.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libtethering.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libprint.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/views/libprint.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libimport.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libimport.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libexport.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libexport.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcopy_history.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcopy_history.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libstyles.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libstyles.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libtagging.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libtagging.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libimage.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libimage.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libselect.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libselect.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcollect.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcollect.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/librecentcollect.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/librecentcollect.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libfiltering.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libfiltering.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmetadata.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmetadata.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmetadata_view.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmetadata_view.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libnavigation.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libnavigation.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libhistogram.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libhistogram.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libhistory.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libhistory.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libsnapshots.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libsnapshots.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmodulegroups.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmodulegroups.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libbackgroundjobs.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libbackgroundjobs.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcolorpicker.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcolorpicker.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmasks.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmasks.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libsession.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libsession.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libduplicate.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libduplicate.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libioporder.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libioporder.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libviewswitcher.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libviewswitcher.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libdarktable_label.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libdarktable_label.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libratings.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libratings.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcolorlabels.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcolorlabels.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libfilter.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libfilter.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/liblighttable_mode.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/liblighttable_mode.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libview_toolbox.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libview_toolbox.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmodule_toolbox.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmodule_toolbox.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libfilmstrip.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libfilmstrip.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libhinter.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libhinter.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libglobal_toolbox.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libglobal_toolbox.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libtimeline.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libtimeline.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libimage_infos.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libimage_infos.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmidi.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmidi.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libgamepad.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libgamepad.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcamera.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libcamera.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/liblive_view.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/liblive_view.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/liblocation.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/liblocation.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmap_settings.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmap_settings.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmap_locations.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libmap_locations.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libgeotagging.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libgeotagging.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libprint_settings.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/lighttable/libprint_settings.so" to "$ORIGIN/../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librawprepare.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librawprepare.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsoften.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsoften.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbloom.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbloom.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhighpass.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhighpass.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblowpass.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblowpass.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libshadhi.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libshadhi.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorreconstruct.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorreconstruct.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtonemap.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtonemap.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtonecurve.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtonecurve.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolisa.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolisa.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libgamma.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libgamma.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtemperature.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtemperature.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorcorrection.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorcorrection.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbasicadj.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbasicadj.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libexposure.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libexposure.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libequalizer.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libequalizer.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librgbcurve.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librgbcurve.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorbalance.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorbalance.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorin.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorin.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorout.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorout.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorchecker.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorchecker.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libclipping.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libclipping.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcrop.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcrop.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsharpen.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsharpen.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdither.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdither.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libmonochrome.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libmonochrome.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbasecurve.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbasecurve.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorzones.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorzones.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhighlights.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhighlights.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librawoverexposed.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librawoverexposed.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libvelvia.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libvelvia.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libvignette.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libvignette.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsplittoning.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsplittoning.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libgrain.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libgrain.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libclahe.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libclahe.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbilateral.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbilateral.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libprofile_gamma.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libprofile_gamma.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolortransfer.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolortransfer.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolormapping.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolormapping.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libchannelmixer.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libchannelmixer.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libgraduatednd.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libgraduatednd.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librelight.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librelight.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libzonesystem.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libzonesystem.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdemosaic.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdemosaic.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librotatepixels.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librotatepixels.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libscalepixels.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libscalepixels.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libatrous.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libatrous.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcacorrect.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcacorrect.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liboverexposed.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liboverexposed.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhotpixels.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhotpixels.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblowlight.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblowlight.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libspots.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libspots.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libretouch.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libretouch.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libliquify.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libliquify.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librawdenoise.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librawdenoise.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libborders.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libborders.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libnlmeans.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libnlmeans.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorcontrast.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorcontrast.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblevels.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblevels.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librgblevels.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/librgblevels.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorize.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorize.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libinvert.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libinvert.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libvibrance.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libvibrance.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libflip.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libflip.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libfinalscale.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libfinalscale.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libglobaltonemap.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libglobaltonemap.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbilat.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libbilat.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdenoiseprofile.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdenoiseprofile.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdefringe.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdefringe.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libashift.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libashift.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhazeremoval.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libhazeremoval.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libfilmic.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libfilmic.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libmask_manager.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libmask_manager.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblut3d.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblut3d.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtoneequal.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libtoneequal.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libfilmicrgb.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libfilmicrgb.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libnegadoctor.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libnegadoctor.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libchannelmixerrgb.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libchannelmixerrgb.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcensorize.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcensorize.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorbalancergb.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcolorbalancergb.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcacorrectrgb.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libcacorrectrgb.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdiffuse.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libdiffuse.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libblurs.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libblurs.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsigmoid.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libsigmoid.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libprimaries.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libprimaries.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libwatermark.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/libwatermark.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblens.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/liblens.so" to "$ORIGIN/.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libcopy.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libcopy.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libjpeg.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libjpeg.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libpdf.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libpdf.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libpng.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libpng.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libppm.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libppm.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libpfm.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libpfm.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libtiff.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libtiff.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libjpegxl.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libjpegxl.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libwebp.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libwebp.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libexr.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libexr.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libj2k.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libj2k.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libavif.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libavif.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libxcf.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/format/libxcf.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libdisk.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libdisk.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libemail.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libemail.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libgallery.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libgallery.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/liblatex.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/liblatex.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libpiwigo.so
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/lib/darktable/plugins/imageio/storage/libpiwigo.so" to "$ORIGIN/../../.."
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable-cltest
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/bin/darktable-cltest" to "$ORIGIN/../lib/darktable"
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable-cli
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/bin/darktable-cli" to "$ORIGIN/../lib/darktable"
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable-generate-cache
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/bin/darktable-generate-cache" to "$ORIGIN/../lib/darktable"
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable-cmstest
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable-chart
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/bin/darktable-chart" to "$ORIGIN/../lib/darktable"
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/bin/darktable
+-- Set runtime path of "/home/ubuntu/programmer/darktable-4.6.0/bin/darktable" to "$ORIGIN/../lib/darktable"
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/16x16/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/22x22/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/24x24/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/32x32/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/48x48/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/64x64/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/256x256/apps/darktable.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/scalable/apps/darktable-1.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/scalable/apps/darktable-2.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/scalable/apps/darktable-3.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/icons/hicolor/scalable/apps/darktable.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/ashift.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/ashift.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/atrous.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/atrous.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/basecurve.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/basecurve.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/bilateral.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/bilateral.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/bloom.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/bloom.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/borders.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/borders.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/cacorrect.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/cacorrect.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/channelmixer.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/channelmixer.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/clahe.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/clahe.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/clipping.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/clipping.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colisa.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colisa.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorcorrection.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorcorrection.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorin.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorin.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colormapping.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colormapping.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorout.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorout.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorreconstruct.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorreconstruct.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colortransfer.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colortransfer.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorzones.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/colorzones.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/default.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/demosaic.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/demosaic.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/dither.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/dither.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/exposure.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/exposure.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/flip.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/flip.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/graduatednd.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/graduatednd.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/grain.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/grain.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/hazeremoval.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/hazeremoval.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/highlights.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/highlights.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/highpass.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/highpass.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/hotpixels.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/hotpixels.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/invert.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/invert.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/lens.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/lens.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/levels.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/levels.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/liquify.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/liquify.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/lowlight.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/lowlight.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/lowpass.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/lowpass.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/monochrome.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/monochrome.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/nlmeans.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/nlmeans.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/overexposed.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/overexposed.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/profile_gamma.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/profile_gamma.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/rawdenoise.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/rawdenoise.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/rawimport.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/rawimport.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/rawprepare.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/rawprepare.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/relight.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/relight.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/shadhi.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/shadhi.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/sharpen.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/sharpen.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/soften.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/soften.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/splittoning.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/splittoning.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/spots.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/spots.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/temperature.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/temperature.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/template.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/template.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/tonecurve.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/tonecurve.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/tonemap.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/tonemap.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/velvia.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/velvia.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/vignette.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/vignette.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/watermark.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/watermark.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/zonesystem.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/plugins/darkroom/zonesystem.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/dt_logo_128x128.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/dt_text.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton-1.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton-1.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton-2.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton-2.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton-3.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton-3.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pixmaps/idbutton.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/atrous.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/basecurve.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/basic.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/basicadj.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/bilateral.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/blendop.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/bloom.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/blurs.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/bspline.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/channelmixer.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/colorreconstruction.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/colorspaces.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/demosaic_markesteijn.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/demosaic_other.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/demosaic_ppg.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/demosaic_rcd.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/demosaic_vng.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/denoiseprofile.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/diffuse.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/dwt.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/extended.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/filmic.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/gaussian.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/guided_filter.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/hazeremoval.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/highpass.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/liquify.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/locallaplacian.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/lut3d.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/negadoctor.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/nlmeans.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/retouch.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/rgbcurve.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/rgblevels.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/sharpen.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/sigmoid.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/soften.cl
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/color_conversion.h
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/colorspace.h
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/common.h
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/noise_generator.h
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/programs.conf
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/kernels/rgb_norms.h
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-elegant-dark.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-elegant-darker.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-elegant-grey.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-icons-dark.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-icons-darker.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-icons-grey.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable-icons.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/themes/darktable.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/bullet.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/close.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/closelabel.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/donate-button.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/download-icon.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/favicon.ico
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/image-1.jpg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/lightbox.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/loading.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/nextlabel.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/prevlabel.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/style.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/style/thumb-1.jpg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/photoswipe.min.js
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/photoswipe-ui-default.min.js
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/default-skin
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/default-skin/default-skin.png
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/default-skin/default-skin.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/default-skin/default-skin.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/default-skin/preloader.gif
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/photoswipe-ui-default.js
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/LICENSE
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/photoswipe.css
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/pswp/photoswipe.js
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/latex/photobook.cls
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/lua
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/lua/darktable
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/lua/darktable/debug.lua
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/luarc
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/applications/org.darktable.darktable.desktop
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/metainfo/org.darktable.darktable.appdata.xml
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/darktable.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/fixed-size-text.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/hasselblad.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/metadata-template.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/promo.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/simple-text-shadow.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/watermarks/simple-text.svg
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/gdb_commands
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/noiseprofiles.json
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/wb_presets.json
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/darktablerc
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/darktable.bash
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/doc/darktable/README.md
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/doc/darktable/AUTHORS
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/doc/darktable/TRANSLATORS.md
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/doc/darktable/LICENSE
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/man/man1/darktable.1
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/man/man1/darktable-cli.1
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/man/man1/darktable-generate-cache.1
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/man/man1/darktable-cltest.1
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/man/man1/darktable-cmstest.1
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/tools/common.sh
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/tools/purge_from_cache.sh
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/tools/purge_non_existing_images.sh
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/tools/purge_unused_tags.sh
+-- Installing: /home/ubuntu/programmer/darktable-4.6.0/share/darktable/tools/extract_wb_from_images.sh
+darktable 4.6.0
+Copyright (C) 2012-2023 Johannes Hanika and other contributors.
+
+Compile options:
+  Bit depth              -> 64 bit
+  Debug                  -> DISABLED
+  SSE2 optimizations     -> ENABLED
+  OpenMP                 -> ENABLED
+  OpenCL                 -> ENABLED
+  Lua                    -> ENABLED  - API version 9.2.0
+  Colord                 -> ENABLED
+  gPhoto2                -> ENABLED
+  GMIC                   -> ENABLED  - Compressed LUTs are supported
+  GraphicsMagick         -> ENABLED
+  ImageMagick            -> DISABLED
+  libavif                -> ENABLED
+  libheif                -> ENABLED
+  libjxl                 -> ENABLED
+  OpenJPEG               -> ENABLED
+  OpenEXR                -> ENABLED
+  WebP                   -> ENABLED
+
+See https://www.darktable.org/resources/ for detailed documentation.
+See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.

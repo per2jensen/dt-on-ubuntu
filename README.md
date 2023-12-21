@@ -48,50 +48,152 @@ The compile script does the following:
 
 The end result from running "darktable --version" on the latest supported build, is:
 ````
-this is darktable 4.4.2
-copyright (c) 2009-2023 johannes hanika
-https://github.com/darktable-org/darktable/issues/new/choose
+darktable 4.6.0
+Copyright (C) 2012-2023 Johannes Hanika and other contributors.
 
-compile options:
-  bit depth is 64 bit
-  normal build
-  SSE2 optimized codepath enabled
-  OpenMP support enabled
-  OpenCL support enabled
-  Lua support enabled, API version 9.1.0
-  Colord support enabled
-  gPhoto2 support enabled
-  GraphicsMagick support enabled
-  ImageMagick support disabled
-  libavif support enabled
-  libheif support enabled
-  libjxl support enabled
-  OpenJPEG support enabled
-  OpenEXR support enabled
-  WebP support enabled
+Compile options:
+  Bit depth              -> 64 bit
+  Debug                  -> DISABLED
+  SSE2 optimizations     -> ENABLED
+  OpenMP                 -> ENABLED
+  OpenCL                 -> ENABLED
+  Lua                    -> ENABLED  - API version 9.2.0
+  Colord                 -> ENABLED
+  gPhoto2                -> ENABLED
+  GMIC                   -> ENABLED  - Compressed LUTs are supported
+  GraphicsMagick         -> ENABLED
+  ImageMagick            -> DISABLED
+  libavif                -> ENABLED
+  libheif                -> ENABLED
+  libjxl                 -> ENABLED
+  OpenJPEG               -> ENABLED
+  OpenEXR                -> ENABLED
+  WebP                   -> ENABLED
+
+See https://www.darktable.org/resources/ for detailed documentation.
+See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
 ````
 
-# How to compile Darktable 4.2.2 for Ubuntu 23.04 in a VM
+# How to compile Darktable 4.6.0 for Ubuntu 23.10 in a VM
+
 ````
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/23.04/DT42
+    cd dt-on-ubuntu/23.10/DT46
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 ````
-    If you have an old VM lying around and want to start from a fresh, do this:
+
+If you have an old VM lying around and want to start from a fresh, do this:
+
 ````
-    multipass stop   ubuntu2304-DTcompile
-    multipass delete ubuntu2304-DTcompile
+    multipass stop   ubuntu2310-DTcompile
+    multipass delete ubuntu2310-DTcompile
     multipass purge 
 ````
 
+# Shell access to VM to see the buildlog
+
+````
+# become the 'ubuntu' user in the VM
+multipass shell ubuntu2310-DTcompile  
+
+# view the output captued from 'configure' and 'make'
+less DT-4.6.0.log
+````
+
+# Output from 'configure'
+
+The full log file has been saved in git ("[DT-4.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/23.04/DT44/_compile.sh])", for viewing if you are interested
+
+````
+-- ----------------------------------------------------------------------------------
+--  Libraw 0.21.1 configuration            <http://www.libraw.org>
+-- 
+--  Libraw will be compiled with OpenMP support .................. YES
+--  Libraw will be compiled with LCMS support .................... NO
+--  Libraw will be compiled with example command-line programs ... NO
+--  Libraw will be compiled with RedCine codec support ........... NO
+--  Libraw will be compiled with DNG deflate codec support ....... YES
+--  Libraw will be compiled with DNG lossy codec support ......... YES
+--  Libraw will be compiled with RawSpeed support ................ NO
+--  Libraw will be compiled with debug message from dcraw ........ NO
+--  Libraw will be compiled with Foveon X3F support .............. NO
+--  Libraw will be compiled with Raspberry Pi RAW support ........ NO
+--  Libraw will be compiled as a static library
+-- -------------------------------------------------------
+
+-- The following features have been enabled:
+
+ * OpenMP-based threading, used for parallelization of the library
+ * XML reading, used for loading of data/cameras.xml
+ * Lossy JPEG decoding, used for DNG Lossy JPEG compression decoding
+ * ZLIB decoding, used for DNG Deflate compression decoding
+
+-- The following OPTIONAL packages have been found:
+
+ * FFI
+ * Terminfo
+ * zstd
+ * LLVM
+ * Gettext
+ * XMLLINT, command line XML tool, <http://xmlsoft.org/>
+   Used for validation of data/cameras.xml
+ * Gphoto2 (required version >= 2.5)
+ * OpenEXR (required version >= 3.0)
+ * JXL (required version >= 0.7.0)
+ * WebP (required version >= 0.3.0)
+ * libavif
+ * libheif
+ * PortMidi, Portable MIDI library, <https://github.com/PortMidi/portmidi>
+   Used for hardware MIDI input devices
+ * OpenJPEG
+ * IsoCodes (required version >= 3.66)
+ * Libsecret
+ * GraphicsMagick
+ * GMIC
+ * ICU
+ * Lua54 (required version >= 5.4)
+ * OSMGpsMap
+ * Colord
+ * ColordGTK
+ * Cups
+ * SDL2, low level access to audio, keyboard, mouse, joystick, and graphics hardware, <https://www.libsdl.org/>
+ * X11
+
+-- The following REQUIRED packages have been found:
+
+ * GTK3 (required version >= 3.24.15)
+ * Threads
+ * Imath
+ * LensFun
+ * Sqlite3 (required version >= 3.15)
+ * GIO
+ * GThread
+ * GModule
+ * PangoCairo
+ * Rsvg2
+ * LibXml2
+ * PNG
+ * TIFF
+ * LCMS2
+ * JsonGlib
+ * Exiv2 (required version >= 0.25)
+ * Pugixml (required version >= 1.2), Light-weight, simple and fast XML parser, <http://pugixml.org/>
+   Used for loading of data/cameras.xml
+ * CURL (required version >= 7.56)
+ * Glib
+ * ZLIB, software library used for data compression
+   Used for decoding DNG Deflate compression
+ * JPEG, free library for handling the JPEG image data format, implements a JPEG codec
+   Used for decoding DNG Lossy JPEG compression
+ * OpenMP, Open Multi-Processing, <https://www.openmp.org/>
+   Used for parallelization of the library
+````
 
 ## Build on your machine
 Once you are happy that things work in the VM, consider changing
 the compile script to your liking (set the INSTALL_PREFIX env variable in 22-04/DT42/DT42_compile.sh)
 and run the script to enjoy the DT goodness :-)
-
-
 
 # How to follow Git Master, to be on the bleeding edge
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
@@ -102,7 +204,7 @@ and run the script to enjoy the DT goodness :-)
 Edit the environment variables in the script to your taste.
 
 
-## docs
+## Docs
 Documentation is not compiled
   
 # Links
