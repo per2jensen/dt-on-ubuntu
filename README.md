@@ -19,7 +19,7 @@ There are 2 ways to install Darktable:
 
 * Multipass
     
-    The scrips requires Ubuntu Multipass to be installed, as all activity
+    The scripts require Ubuntu Multipass to be installed, as all activity
     takes place within a virtual machine. You can of course create your own 
     Ubuntu VM and fire off the "compile script" there.
 
@@ -91,7 +91,7 @@ If you have an old VM lying around and want to start from a fresh, do this:
     multipass purge 
 ````
 
-# Shell access to VM to see the buildlog
+## Shell access to VM to see the buildlog
 
 ````
 # become the 'ubuntu' user in the VM
@@ -101,9 +101,9 @@ multipass shell ubuntu2310-DTcompile
 less DT-4.6.0.log
 ````
 
-# Output from 'configure'
+## Output from 'configure'
 
-The full log file has been saved in git ("[DT-4.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/23.04/DT44/_compile.sh])", for viewing if you are interested
+The full log file has been saved in git ("[DT-4.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/23.10/DT46/doc/DT-4.6.0.log)", for viewing if you are interested
 
 ````
 -- ----------------------------------------------------------------------------------
@@ -190,21 +190,23 @@ The full log file has been saved in git ("[DT-4.6.0.log](https://github.com/per2
    Used for parallelization of the library
 ````
 
-## Build on your machine
+# Build on your machine
+
 Once you are happy that things work in the VM, consider changing
 the compile script to your liking (set the INSTALL_PREFIX env variable in 22-04/DT42/DT42_compile.sh)
 and run the script to enjoy the DT goodness :-)
 
 # How to follow Git Master, to be on the bleeding edge
+
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/22.04/DT42
+    cd dt-on-ubuntu/23.10/DT46
     chmod u+x master_compile.sh
     ./master_compile.sh
 
-Edit the environment variables in the script to your taste.
+Edit the environment variables to your taste.
 
 
-## Docs
+# Docs
 Documentation is not compiled
   
 # Links
