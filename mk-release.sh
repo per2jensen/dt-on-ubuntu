@@ -35,6 +35,10 @@ rm -fr "$DIR/21.04"
 rm -fr "$DIR/21.10"
 rm -fr "$DIR/22.04/DT381"
 rm -fr "$DIR/22.04/DT40"
+rm -fr "$DIR/23.04"
+rm -fr "$DIR/23.10"
+rm -fr "$DIR/24.04/DT46"
+
 rm mk-release.sh
 
 echo "This package is built from tag: $1" > VERSION
