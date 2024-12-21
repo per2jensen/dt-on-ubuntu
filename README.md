@@ -48,7 +48,7 @@ The compile script does the following:
 
 The end result from running "darktable --version" on the latest supported build, is:
 ````
-darktable 4.8.0
+darktable 5.0.0
 Copyright (C) 2012-2024 Johannes Hanika and other contributors.
 
 Compile options:
@@ -57,7 +57,7 @@ Compile options:
   SSE2 optimizations     -> ENABLED
   OpenMP                 -> ENABLED
   OpenCL                 -> ENABLED
-  Lua                    -> ENABLED  - API version 9.3.0
+  Lua                    -> ENABLED  - API version 9.4.0
   Colord                 -> ENABLED
   gPhoto2                -> ENABLED
   GMIC                   -> ENABLED  - Compressed LUTs are supported
@@ -66,6 +66,7 @@ Compile options:
   libavif                -> ENABLED
   libheif                -> ENABLED
   libjxl                 -> ENABLED
+  LibRaw                 -> ENABLED  - Version 0.22.0-Devel202403
   OpenJPEG               -> ENABLED
   OpenEXR                -> ENABLED
   WebP                   -> ENABLED
@@ -74,11 +75,11 @@ See https://www.darktable.org/resources/ for detailed documentation.
 See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
 ````
 
-# How to compile Darktable 4.8.0 for Ubuntu 24.04 in a VM
+# How to compile Darktable 5.0.0 for Ubuntu 24.04 in a VM
 
 ````
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/24.04/DT48
+    cd dt-on-ubuntu/24.04/DT50
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 ````
@@ -98,19 +99,23 @@ If you have an old VM lying around and want to start from a fresh, do this:
 multipass shell ubuntu2404-DTcompile  
 
 # view the output captued from 'configure' and 'make'
-less DT-4.8.0.log
+less DT-5.0.0.log
 ````
 
 ## Output from 'configure'
 
-The full log file has been saved in git ("[DT-4.8.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/24.04/DT48/doc/DT-4.8.0.log)", for viewing if you are interested
+The full log file has been saved in git ("[DT-5.0.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/24.04/DT50/doc/DT-5.0.0.log)", for viewing if you are interested
 
 
 # Build on your machine
 
 Once you are happy that things work in the VM, consider changing
-the compile script to your liking (set the INSTALL_PREFIX env variable in 22-04/DT42/DT42_compile.sh)
-and run the script to enjoy the DT goodness :-)
+a couple of env vars:
+
+- set the DT_SRC_FOLDER env variable in 24-04/DT50/DTcompile.sh
+- set the INSTALL_PREFIX env var in 24-04-DT50/envvars
+
+and run the DTcompile.sh to enjoy the DT goodness :-)
 
 # How to follow Git Master, to be on the bleeding edge
 
