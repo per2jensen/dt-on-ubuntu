@@ -47,26 +47,30 @@ The compile script does the following:
 *    starts Darktable to print the --version info in the VM
 
 The end result from running "darktable --version" on the latest supported build, is:
+
 ````
-darktable 5.0.0
-Copyright (C) 2012-2024 Johannes Hanika and other contributors.
+darktable 5.2.1
+Copyright (C) 2012-2025 Johannes Hanika and other contributors.
 
 Compile options:
   Bit depth              -> 64 bit
+  Exiv2                  -> 0.27.6
+  Lensfun                -> 0.3.4
   Debug                  -> DISABLED
   SSE2 optimizations     -> ENABLED
   OpenMP                 -> ENABLED
   OpenCL                 -> ENABLED
-  Lua                    -> ENABLED  - API version 9.4.0
+  Lua                    -> ENABLED  - API version 9.5.0
   Colord                 -> ENABLED
   gPhoto2                -> ENABLED
+  OSMGpsMap              -> ENABLED  - map view is available
   GMIC                   -> ENABLED  - Compressed LUTs are supported
   GraphicsMagick         -> ENABLED
   ImageMagick            -> DISABLED
   libavif                -> ENABLED
   libheif                -> ENABLED
   libjxl                 -> ENABLED
-  LibRaw                 -> ENABLED  - Version 0.22.0-Devel202403
+  LibRaw                 -> ENABLED  - Version 0.22.0-Devel202502
   OpenJPEG               -> ENABLED
   OpenEXR                -> ENABLED
   WebP                   -> ENABLED
