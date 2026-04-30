@@ -4,7 +4,7 @@
 # directly on your machine
 
 # Release to use
-export RELEASE=release-5.4.0
+export RELEASE=release-5.4.1
 export VERSION=$(echo $RELEASE|grep -E -o '\-.*')
 
 
