@@ -1,0 +1,26 @@
+#! /bin/bash
+
+# Adjust variable to your liking, if you want to run the compile script
+# directly on your machine
+
+# Release to use
+export RELEASE=release-5.4.0
+export VERSION=$(echo $RELEASE|grep -E -o '\-.*')
+
+
+# Folder which already contains a darktable git checkout or should be used for a fresh one 
+export DT_SRC_FOLDER="$HOME/git/darktable"
+
+export LOG="$HOME/DT${VERSION}.log"
+export INSTALL_PREFIX="$HOME/programmer/darktable${VERSION}"
+
+# the code name for Ubuntu used in LLVM's repos
+export CODENAME_LLVM="lunar"
+
+
+VM_NAME=ubuntu2404-DTcompile
+VM_SIZE=15G
+VM_IMAGE=24.04
+DT_COMPILE_SCRIPT=DTcompile.sh
+_COMPILE=_compile.sh
+
