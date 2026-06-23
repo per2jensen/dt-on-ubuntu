@@ -58,10 +58,10 @@ Compile options:
   SSE2 optimizations     -> ENABLED
   OpenMP                 -> ENABLED
   OpenCL                 -> ENABLED
-  Lua                    -> ENABLED  - API version 9.6.0
+  Lua                    -> ENABLED  - API version 9.7.0
   Colord                 -> ENABLED
-  gPhoto2                -> ENABLED
-  OSMGpsMap              -> ENABLED  - map view is available
+  gPhoto2                -> ENABLED  - Camera tethering is available
+  OSMGpsMap              -> ENABLED  - Map view is available
   GMIC                   -> ENABLED  - Compressed LUTs are supported
   GraphicsMagick         -> ENABLED
   ImageMagick            -> DISABLED
@@ -72,6 +72,7 @@ Compile options:
   OpenJPEG               -> ENABLED
   OpenEXR                -> ENABLED
   WebP                   -> ENABLED
+  AI                     -> ENABLED
 
 See https://www.darktable.org/resources/ for detailed documentation.
 See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
@@ -149,22 +150,22 @@ The compile script does the following:
 The end result from running "darktable --version" on the latest supported build, is:
 
 ````
-~$ programmer/darktable-5.4.1/bin/darktable --version
-darktable 5.4.1
+~$ programmer/darktable-5.6.0/bin/darktable --version
+darktable 5.6.0
 Copyright (C) 2012-2026 Johannes Hanika and other contributors.
 
 Compile options:
   Bit depth              -> 64 bit
-  Exiv2                  -> 0.28.8
+  Exiv2                  -> 0.27.6
   Lensfun                -> 0.3.4
   Debug                  -> DISABLED
   SSE2 optimizations     -> ENABLED
   OpenMP                 -> ENABLED
   OpenCL                 -> ENABLED
-  Lua                    -> ENABLED  - API version 9.6.0
+  Lua                    -> ENABLED  - API version 9.7.0
   Colord                 -> ENABLED
-  gPhoto2                -> ENABLED
-  OSMGpsMap              -> ENABLED  - map view is available
+  gPhoto2                -> ENABLED  - Camera tethering is available
+  OSMGpsMap              -> ENABLED  - Map view is available
   GMIC                   -> ENABLED  - Compressed LUTs are supported
   GraphicsMagick         -> ENABLED
   ImageMagick            -> DISABLED
@@ -175,17 +176,17 @@ Compile options:
   OpenJPEG               -> ENABLED
   OpenEXR                -> ENABLED
   WebP                   -> ENABLED
+  AI                     -> ENABLED
 
 See https://www.darktable.org/resources/ for detailed documentation.
 See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
-
 ````
 
-# How to compile Darktable 5.4.1 for Ubuntu 26.04 in a VM
+# How to compile Darktable 5.6.0 for Ubuntu 24.04 in a VM
 
 ````
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/26.04/DT541
+    cd dt-on-ubuntu/24.04/DT56
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 ````
@@ -205,12 +206,12 @@ If you have an old VM lying around and want to start from a fresh, do this:
 multipass shell ubuntu2604-DTcompile  
 
 # view the output captued from 'configure' and 'make'
-less DT-5.4.1.log
+less DT-5.6.0.log
 ````
 
 ## Output from 'configure'
 
-The full log file has been saved in git ("[DT-5.4.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/24.04/DT54/doc/DT-5.4.0.log)", for viewing if you are interested
+The full log file has been saved in git ("[DT-5.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/24.04/DT56/doc/DT-5.6.0.log)", for viewing if you are interested
 
 # Build on your machine
 
@@ -224,7 +225,7 @@ and run the DTcompile.sh to enjoy the DT goodness :-)
 # How to follow Git Master, to be on the bleeding edge
 
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/26.04/DT541
+    cd dt-on-ubuntu/24.04/DT56
     chmod u+x master_compile.sh
     ./master_compile.sh
 
