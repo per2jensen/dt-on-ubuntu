@@ -156,7 +156,7 @@ Copyright (C) 2012-2026 Johannes Hanika and other contributors.
 
 Compile options:
   Bit depth              -> 64 bit
-  Exiv2                  -> 0.27.6
+  Exiv2                  -> 0.28.8
   Lensfun                -> 0.3.4
   Debug                  -> DISABLED
   SSE2 optimizations     -> ENABLED
@@ -182,11 +182,11 @@ See https://www.darktable.org/resources/ for detailed documentation.
 See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
 ````
 
-# How to compile Darktable 5.6.0 for Ubuntu 24.04 in a VM
+# How to compile Darktable 5.6.0 for Ubuntu 26.04 in a VM
 
 ````
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/24.04/DT56
+    cd dt-on-ubuntu/26.04/DT56
     chmod u+x install_in_vm.sh
     ./install_in_vm.sh
 ````
@@ -211,7 +211,7 @@ less DT-5.6.0.log
 
 ## Output from 'configure'
 
-The full log file has been saved in git ("[DT-5.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/24.04/DT56/doc/DT-5.6.0.log)", for viewing if you are interested
+The full log file has been saved in git ("[DT-5.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/26.04/DT56/doc/DT-5.6.0.log)", for viewing if you are interested
 
 # Build on your machine
 
@@ -225,7 +225,7 @@ and run the DTcompile.sh to enjoy the DT goodness :-)
 # How to follow Git Master, to be on the bleeding edge
 
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
-    cd dt-on-ubuntu/24.04/DT56
+    cd dt-on-ubuntu/26.04/DT56
     chmod u+x master_compile.sh
     ./master_compile.sh
 
