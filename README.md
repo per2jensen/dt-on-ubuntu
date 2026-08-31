@@ -139,19 +139,17 @@ See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
 # What the scripts do:
 The compile script does the following:
 
-*    creates/starts a VM called ubuntu<version>-DTcompile
-*    clones Darktable from Github into the VM
-*    adds llvm repoes to the VM's APT sources
-*    adds llvm APT key into the VM
-*    installs loads of necessary Ubuntu packages in the VM
-*    builds and install Darktable in the VM
-*    starts Darktable to print the --version info in the VM
+* creates/starts a VM called ubuntu<version>-DTcompile
+* clones Darktable from Github into the VM
+* installs loads of necessary Ubuntu packages in the VM
+* builds and install Darktable in the VM
+* starts Darktable to print the --version info in the VM
 
 The end result from running "darktable --version" on the latest supported build, is:
 
-````
+````bash
 ~$ programmer/darktable-5.6.0/bin/darktable --version
-darktable 5.6.0
+darktable 5.6.1 [linux]
 Copyright (C) 2012-2026 Johannes Hanika and other contributors.
 
 Compile options:
@@ -184,7 +182,7 @@ See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
 
 # How to compile Darktable 5.6.0 for Ubuntu 26.04 in a VM
 
-````
+````bash
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
     cd dt-on-ubuntu/26.04/DT56
     chmod u+x install_in_vm.sh
@@ -193,7 +191,7 @@ See https://github.com/darktable-org/darktable/issues/new/choose to report bugs.
 
 If you have an old VM lying around and want to start from a fresh, do this:
 
-````
+````bash
     multipass stop   ubuntu2604-DTcompile
     multipass delete ubuntu2604-DTcompile
     multipass purge 
@@ -201,7 +199,7 @@ If you have an old VM lying around and want to start from a fresh, do this:
 
 ## Shell access to VM to see the buildlog
 
-````
+````bash
 # become the 'ubuntu' user in the VM
 multipass shell ubuntu2604-DTcompile  
 
@@ -213,7 +211,7 @@ less DT-5.6.0.log
 
 The full log file has been saved in git ("[DT-5.6.0.log](https://github.com/per2jensen/dt-on-ubuntu/blob/master/26.04/DT56/doc/DT-5.6.0.log)", for viewing if you are interested
 
-# Build on your machine
+## Build on your machine
 
 Once you are happy that things work in the VM, consider changing a couple of env vars in `envvars`:
 
@@ -222,7 +220,7 @@ Once you are happy that things work in the VM, consider changing a couple of env
 
 and run the DTcompile.sh to enjoy the DT goodness :-)
 
-# How to follow Git Master, to be on the bleeding edge
+## How to follow Git Master, to be on the bleeding edge
 
     git clone https://github.com/per2jensen/dt-on-ubuntu.git
     cd dt-on-ubuntu/26.04/DT56
@@ -231,11 +229,12 @@ and run the DTcompile.sh to enjoy the DT goodness :-)
 
 Edit the environment variables to your taste.
 
+## Docs
 
-# Docs
 Documentation is not compiled
   
-# Links
+## Links
+
   [Darktable website](https://www.darktable.org/)
   
   [Darktable on github](https://github.com/darktable-org/darktable)
