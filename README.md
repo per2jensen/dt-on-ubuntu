@@ -178,14 +178,100 @@ Once the build has been tested successfully in the VM, the same scripts can be u
 
 Review the variables in `envvars`, in particular:
 
-* `DT_SRC_FOLDER`
-* `INSTALL_PREFIX`
+- `DT_SRC_FOLDER`
+- `INSTALL_PREFIX`
 
 Then run:
 
-```
+```bash
 ./DTcompile.sh
 ```
+
+My builds are installed in versioned directories under `~/programmer`, for example:
+
+```text
+~/programmer/darktable-5.6.1
+```
+
+I use a stable symbolic link, `~/programmer/darktable`, to select the version currently in use:
+
+```text
+$ ls -ld ~/programmer/darktable*
+lrwxrwxrwx 1 pj pj 15 Aug 31 21:10 /home/pj/programmer/darktable -> darktable-5.6.1
+drwxrwxr-x 1 pj pj 22 Sep 26 10:51 /home/pj/programmer/darktable-5.6.1
+```
+
+This stable path is also useful for desktop integration, as GNOME launchers and icons can continue to reference `~/programmer/darktable` when switching between installed darktable versions.
+
+## GNOME desktop integration for a local installation
+
+When darktable is installed under a private prefix such as:
+
+```text
+~/programmer/darktable
+```
+
+the executable works normally, but GNOME does not automatically search that installation prefix for application launchers and icons.
+
+The darktable installation contains both:
+
+```text
+~/programmer/darktable/share/applications/darktable.desktop
+~/programmer/darktable/share/icons/hicolor/
+```
+
+A user-local desktop launcher can be created with:
+
+```bash
+mkdir -p ~/.local/share/applications
+
+ln -sf \
+    ~/programmer/darktable/share/applications/darktable.desktop \
+    ~/.local/share/applications/darktable.desktop
+```
+
+The desktop file normally uses:
+
+```text
+Icon=darktable
+```
+
+GNOME therefore needs the darktable icon to be available through one of its normal icon-theme paths. A convenient solution is to link the scalable icon into the user's `hicolor` theme:
+
+```bash
+mkdir -p ~/.local/share/icons/hicolor/scalable/apps
+
+ln -sf \
+    ~/programmer/darktable/share/icons/hicolor/scalable/apps/darktable.svg \
+    ~/.local/share/icons/hicolor/scalable/apps/darktable.svg
+```
+
+Refresh the user desktop and icon caches:
+
+```bash
+update-desktop-database ~/.local/share/applications
+
+gtk-update-icon-cache -f -t ~/.local/share/icons/hicolor 2>/dev/null || true
+```
+
+The launcher can be inspected with:
+
+```bash
+grep -E '^(Name|Exec|TryExec|Icon)=' \
+    ~/.local/share/applications/darktable.desktop
+```
+
+The relevant entries should use the stable darktable installation path, for example:
+
+```text
+Exec=/home/<user>/programmer/darktable/bin/darktable %U
+TryExec=/home/<user>/programmer/darktable/bin/darktable
+Icon=darktable
+```
+
+If GNOME still displays a stale or missing icon after updating the files, log out and back in to refresh the GNOME Shell session.
+
+With this arrangement, the GNOME launcher and icon continue to reference the stable `~/programmer/darktable` path. Installing a new version only requires updating that symlink; the desktop integration does not need to be recreated.
 
 # Follow Git master
 
