@@ -55,10 +55,10 @@ The current tested release is:
 
 ```
 darktable 5.6.1
-Ubuntu 24.04 LTS
+Ubuntu 26.04.1 LTS
 ```
 
-The Ubuntu 24.04 build uses LLVM/Clang 20 from the standard Ubuntu repositories.
+The Ubuntu 26.04 build uses LLVM/Clang 21 from the standard Ubuntu repositories.
 
 No external LLVM repository is required.
 
@@ -74,7 +74,7 @@ Copyright (C) 2012-2026 Johannes Hanika and other contributors.
 
 Compile options:
   Bit depth              -> 64 bit
-  Exiv2                  -> 0.27.6
+  Exiv2                  -> 0.28.8
   Lensfun                -> 0.3.4
   Debug                  -> DISABLED
   SSE2 optimizations     -> ENABLED
@@ -99,7 +99,7 @@ Compile options:
 
 Release:
 
-https://github.com/per2jensen/dt-on-ubuntu/releases/tag/DT561-2404
+https://github.com/per2jensen/dt-on-ubuntu/releases/tag/DT561-2604
 
 # What the scripts do
 
@@ -115,13 +115,13 @@ The VM installation script:
 * installs darktable
 * runs `darktable --version` to show the resulting feature set
 
-# How to compile darktable 5.6.1 for Ubuntu 24.04 in a VM
+# How to compile darktable 5.6.1 for Ubuntu 26.04 in a VM
 
 Clone the repository:
 
 ```
 git clone https://github.com/per2jensen/dt-on-ubuntu.git
-cd dt-on-ubuntu/24.04/DT561
+cd dt-on-ubuntu/26.04/DT561
 ```
 
 Make the launcher executable:
@@ -143,8 +143,8 @@ The script will create the Multipass VM if it does not already exist.
 If an old build VM exists and you want to test from a completely fresh Ubuntu installation:
 
 ```
-multipass stop ubuntu2404-DTcompile
-multipass delete ubuntu2404-DTcompile
+multipass stop ubuntu2604-DTcompile
+multipass delete ubuntu2604-DTcompile
 multipass purge
 ```
 
@@ -161,7 +161,7 @@ again.
 To enter the VM:
 
 ```
-multipass shell ubuntu2404-DTcompile
+multipass shell ubuntu2604-DTcompile
 ```
 
 The build log for darktable 5.6.1 is:
@@ -193,7 +193,7 @@ The same setup can be used to compile darktable Git master:
 
 ```
 git clone https://github.com/per2jensen/dt-on-ubuntu.git
-cd dt-on-ubuntu/24.04/DT561
+cd dt-on-ubuntu/26.04/DT561
 chmod u+x master_compile.sh
 ./master_compile.sh
 ```
@@ -208,7 +208,7 @@ The Intel documentation used was:
 
 https://dgpu-docs.osgc.infra-host.com/driver/client/overview.html
 
-At the time of testing, the documentation did not explicitly list Ubuntu 26.04 as supported, but OpenCL worked successfully with an Intel Iris Xe GPU.
+At primo June 2026, the documentation did not explicitly list Ubuntu 26.04 as supported, but OpenCL worked successfully with an Intel Iris Xe GPU.
 
 Example output:
 
@@ -222,7 +222,7 @@ DEVICE VERSION: OpenCL 3.0 NEO
 [opencl_init] FINALLY: opencl PREFERENCE=ON is AVAILABLE and ENABLED.
 ```
 
-This Intel-specific setup is separate from the standard Ubuntu 24.04 / NVIDIA build described above.
+This Intel-specific setup is separate from the standard Ubuntu 26.04 / NVIDIA build described above.
 
 # Documentation
 
